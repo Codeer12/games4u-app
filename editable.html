@@ -19,7 +19,39 @@
 
     
 <style class="silex-prodotype-style" type="text/css" data-style-id="all-style"></style><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.2" data-silex-viewport=""><meta name="publicationPath" content="{&quot;absPath&quot;:&quot;/ce/github/get/ytbrosweb/master&quot;,&quot;isDir&quot;:true,&quot;mime&quot;:&quot;application/octet-stream&quot;,&quot;name&quot;:&quot;master&quot;,&quot;folder&quot;:&quot;ytbrosweb&quot;,&quot;path&quot;:&quot;ytbrosweb/master&quot;,&quot;service&quot;:&quot;github&quot;,&quot;url&quot;:&quot;http://editor.silex.me/ce/github/get/ytbrosweb/master&quot;}"><!-- Silex HEAD tag do not remove -->
-    <!-- End of Silex HEAD tag do not remove --></head>
+    
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDP24URuLBe5z8zKnVofQNBL2D8KJuT130",
+    authDomain: "max-neighborhood-grocery.firebaseapp.com",
+    databaseURL: "https://max-neighborhood-grocery.firebaseio.com",
+    projectId: "max-neighborhood-grocery",
+    storageBucket: "max-neighborhood-grocery.appspot.com",
+    messagingSenderId: "773266773070"
+  };
+  firebase.initializeApp(config);
+</script>
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-app.js"></script>
+
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-functions.js"></script>
+
+<!-- Comment out (or don't include) services that you don't want to use -->
+<!-- <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase-storage.js"></script> -->
+
+<script>
+  var config = {
+    // ...
+  };
+  firebase.initializeApp(config);
+</script><!-- End of Silex HEAD tag do not remove --></head>
 
 <body data-silex-id="body-initial" class="body-initial all-style enable-mobile silex-runtime" data-silex-type="container">
     <div class="silex-pages">
