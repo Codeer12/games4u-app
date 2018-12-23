@@ -52,6 +52,13 @@ function fullscreenChange() {
   var iframe = document.querySelector('iframe');
   iframe.src = iframe.src;
 }
+var edit = document.getElementById("receive");
+
+
+edit.onclick = function btnShowHide() {
+    save.style.visibility = "visible";
+
+}
 
   (adsbygoogle = window.adsbygoogle || []).push({
     google_ad_client: "ca-pub-4912447307997749",
