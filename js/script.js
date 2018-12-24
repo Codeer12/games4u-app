@@ -67,3 +67,10 @@ function btnShowHide() {
     google_ad_client: "ca-pub-4912447307997749",
     enable_page_level_ads: true
   });
+
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131372284-1');
