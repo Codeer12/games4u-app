@@ -53,14 +53,14 @@ function fullscreenChange() {
   iframe.src = iframe.src;
 }
 
-var ShowHide = document.getElementById("ShowHide");
-var Show = document.getElementById("Show");
-
-ShowHide.onclick = function() {
-    Show.style.visibility = visible;
-
+function btnShowHide() {
+  var x = document.getElementById("Show");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
 }
-
 
 
   (adsbygoogle = window.adsbygoogle || []).push({
