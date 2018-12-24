@@ -174,16 +174,18 @@ function myFunction() {
 </button></div></div><div data-silex-type="html" class="editable-style silex-id-1544632325753-2 html-element page-prodigy paged-element paged-element-visible" style=""><div class="silex-element-content"><div id="container">
   <iframe src="https://play.prodigygame.com/" width="1000" height="800" data-silex-iframe-src="https://play.prodigygame.com/"></iframe> 
   <div>
-    <button class="button" onclick="fullscreenChange()">Click me to fullscreen the iframe</button>
+    <button class="button" onclick="fullscreenChange()"><img src="https://cdn2.iconfinder.com/data/icons/user-interface-46/256/menu_fullscreen-512.png" width="50" height="50"></button>
   </div>
-  <div class="info">You can check keydown event listener when the browser are in fullscreen and press F11 and ESC by console log on developer tools</div>
-  <script type="text/javascript">{
+ <h1>Shoutout to Derick Alexandre for fullscreen!</h1>
+ <div class="error"></div>
+  <script type="text/javascript">
+  {
   var button = document.querySelector('#container .button');
 button.addEventListener('click', fullscreen);
 // when you are in fullscreen, ESC and F11 may not be trigger by keydown listener. 
 // so don't use it to detect exit fullscreen
-document.addEventListener('keydown', function (e) {
-  console.log('key press' + e.keyCode);
+document.addEventListener('keydown', function (F11) {
+  console.log('key press' + F11.keyCode);
 });
 // detect enter or exit fullscreen mode
 document.addEventListener('webkitfullscreenchange', fullscreenChange);
@@ -199,7 +201,7 @@ function fullscreen() {
     document.msFullscreenEnabled) {
     
     // which element will be fullscreen
-    var iframe = document.querySelector('#container iframe');
+    var iframe = document.querySelector('#container div');
     // Do fullscreen
     if (iframe.requestFullscreen) {
       iframe.requestFullscreen();
