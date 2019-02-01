@@ -64,17 +64,39 @@
 
 
 <div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1478366444112-1 section-element" style="">
-        <div data-silex-type="container" class="editable-style silex-element-content silex-id-1478366444112-0 silex-container-content container-element prevent-draggable website-width"><div data-silex-type="html" class="editable-style silex-id-1545614796221-2 html-element" style=""><div class="silex-element-content"><script>
-    firebase.auth().onAuthStateChanged(user => {
-  if (user) {
-    localStorage.setItem('myPage.expectSignIn', '1')
-  } else {
-    localStorage.removeItem('myPage.expectSignIn')
-    // Implement logic to trigger the login dialog here or redirect to sign-in page.
-    // e.g. showDialog()
-  }
-})
-</script></div></div><div data-silex-type="image" class="editable-style image-element silex-id-1546585685659-0 page-mngs-order-to-pickup paged-element page-link-active" style=""><img src="Games4U%20Collab%20with%20Max%20Neighborhood%20Grocery%20Store.png" class="silex-element-content"></div></div>
+        <div data-silex-type="container" class="editable-style silex-element-content silex-id-1478366444112-0 silex-container-content container-element prevent-draggable website-width"><div data-silex-type="html" class="editable-style silex-id-1545614796221-2 html-element" style=""><div class="silex-element-content"> <script>
+ function initApp() {
+      // Listening for auth state changes.
+      // [START authstatelistener]
+      firebase.auth().onAuthStateChanged(function(user) {
+        // [START_EXCLUDE silent]
+        document.getElementById('quickstart-verify-email').disabled = true;
+        // [END_EXCLUDE]
+        if (user) {
+          // User is signed in.
+          var displayName = user.displayName;
+          var email = user.email;
+         
+          // [START_EXCLUDE]
+          document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
+          document.getElementById('quickstart-sign-in').textContent = 'Sign out';
+          document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
+          if (!emailVerified) {
+            document.getElementById('quickstart-verify-email').disabled = false;
+          }
+          // [END_EXCLUDE]
+        } else {
+          // User is signed out.
+          // [START_EXCLUDE]
+          document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
+          document.getElementById('quickstart-sign-in').textContent = 'Sign in';
+          document.getElementById('quickstart-account-details').textContent = 'null';
+           window.location = 'https://ytbros.tk'; //After successful login, user will be redirected to home.html
+          // [END_EXCLUDE]
+        }
+    </script>
+    <div id="user.displayname"></div>
+    <div id="user.email"></div></div></div><div data-silex-type="image" class="editable-style image-element silex-id-1546585685659-0 page-mngs-order-to-pickup paged-element page-link-active" style=""><img src="Games4U%20Collab%20with%20Max%20Neighborhood%20Grocery%20Store.png" class="silex-element-content"></div></div>
     </div><div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1474394621033-3 section-element" style="">
         <div data-silex-type="container" class="editable-style silex-element-content silex-id-1474394621032-2 silex-container-content container-element prevent-draggable website-width"><div data-silex-type="html" class="editable-style silex-id-1542730020762-1 html-element" style="" title="Games4U "><div class="silex-element-content">Pages
 <button>
