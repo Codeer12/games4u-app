@@ -52,6 +52,11 @@
 })
 </script>
  <script>
+     firebase.auth().onAuthStateChanged(user => {
+  if(!user) {
+    window.location = 'https://ytbros.tk'; //If User is not logged in, redirect to login page
+  }
+});
  function initApp() {
       // Listening for auth state changes.
       // [START authstatelistener]
