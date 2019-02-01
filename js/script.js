@@ -63,6 +63,18 @@ function btnShowHide() {
 }
 
 
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA8r2vrQaL3f4Jz1Et09RPvJts2xR_sBOg",
+    authDomain: "login-to-games4u.firebaseapp.com",
+    databaseURL: "https://login-to-games4u.firebaseio.com",
+    projectId: "login-to-games4u",
+    storageBucket: "login-to-games4u.appspot.com",
+    messagingSenderId: "152743638512"
+  };
+  firebase.initializeApp(config);
+
+
   (adsbygoogle = window.adsbygoogle || []).push({
     google_ad_client: "ca-pub-4912447307997749",
     enable_page_level_ads: true
@@ -74,3 +86,14 @@ function btnShowHide() {
   gtag('js', new Date());
 
   gtag('config', 'UA-131372284-1');
+
+
+    firebase.auth().onAuthStateChanged(user => {
+  if (user) {
+    localStorage.setItem('myPage.expectSignIn', '1')
+  } else {
+    localStorage.removeItem('myPage.expectSignIn')
+    // Implement logic to trigger the login dialog here or redirect to sign-in page.
+    // e.g. showDialog()
+  }
+})
