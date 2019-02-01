@@ -143,15 +143,10 @@ function btnShowHide() {
             document.getElementById('quickstart-verify-email').disabled = false;
           }
           // [END_EXCLUDE]
-        } else {
-          // User is signed out.
-          // [START_EXCLUDE]
-          document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
-          document.getElementById('quickstart-sign-in').textContent = 'Sign in';
-          document.getElementById('quickstart-account-details').textContent = 'null';
-           window.location = 'https://ytbros.tk'; //After successful login, user will be redirected to home.html
-          // [END_EXCLUDE]
-        }
+       else if(window.location.href == 'http://ytbros.tk/`){
+/*then do nothing, no need to be redirected because the user exists, as they 
+are within a permitted page */
+    }
     </script>
 <!-- End of Silex HEAD tag do not remove --></head>
 
