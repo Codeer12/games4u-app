@@ -7,25 +7,17 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script>
       
-import { BrowserRouter as Router, Route } from "https://games.ytbros.tk"
-
-import Home from "/"; 
-import Login from "https://ytbros.tk";
-import SignUp from "https://ytbros.tk";
-
-const App = () => {
-  return (
-    <Router>
-      <div>
-        <Route exact path="/" component={Home} />
-        <Route exact path="https://ytbros.tk" component={Login} />
-        <Route exact path="https://ytbros.tk" component={SignUp} />
-      </div>
-    </Router>
-  );
-};
-
-export login-to-games-4u;
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    var displayName = user.displayName;
+    var email = user.email;
+    // ...
+  } else {
+    // User is signed out.
+    window.location = 'https://ytbros.tk';
+  }
+});
     </script>
     
     
