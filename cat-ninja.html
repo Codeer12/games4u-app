@@ -18,7 +18,7 @@
     
 
     
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.2" data-silex-viewport=""><meta name="description" content="The best way to play games!!!!!!! (Winter Update #3)"><link href="css/favicon-16x16.png" rel="shortcut icon"><meta name="hostingProvider" content="ghpages"><meta name="websiteUrl" content="https://games.ytbros.tk/"><!-- Silex HEAD tag do not remove --><script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.2" data-silex-viewport=""><meta name="description" content="The best way to play games!!!!!!! (Winter Update #3)"><link href="favicon-16x16.png" rel="shortcut icon"><meta name="hostingProvider" content="ghpages"><meta name="websiteUrl" content="https://games.ytbros.tk/"><!-- Silex HEAD tag do not remove --><script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
 
 <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
@@ -70,8 +70,99 @@
 <div id="quickstart-account-details"></div>
 <div id="quickstart-sign-in"></div>
 <div id="quickstart-sign-in-status"></div></div></div></div>
-    <div data-silex-type="image" class="editable-style silex-id-1549028488910-1 image-element page-cat-ninja paged-element page-link-active"><img src="assets/LogoMakr_1T9uGG.png" class="silex-element-content"></div></div><div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1474394621033-3 section-element" style="">
-        <div data-silex-type="container" class="editable-style silex-element-content silex-id-1474394621032-2 silex-container-content container-element prevent-draggable website-width"></div>
+    <div data-silex-type="image" class="editable-style silex-id-1549028488910-1 image-element page-cat-ninja paged-element page-link-active"><img src="LogoMakr_1T9uGG.png" class="silex-element-content"></div></div><div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1474394621033-3 section-element" style="">
+        <div data-silex-type="container" class="editable-style silex-element-content silex-id-1474394621032-2 silex-container-content container-element prevent-draggable website-width"><div data-silex-type="html" class="editable-style silex-id-1549658899876-0 html-element page-cat-ninja paged-element page-link-active"><div class="silex-element-content"><div id="container">
+
+<iframe title="Flash Wrapper" width="940" height="640" scrolling="no" frameborder="0" id="792499426" name="792499426" allowtransparency="true" class="igm" src="" data-silex-iframe-src="//4nodbmbq1kg3jfkhn7m4ua4bn329jbnf-a-sites-opensocial.googleusercontent.com/gadgets/ifr?url=http://hosting.gmodules.com/ig/gadgets/file/105629041657992777031/flash-wrapper.xml&amp;container=enterprise&amp;view=default&amp;lang=en&amp;country=ALL&amp;sanitize=0&amp;v=7c131b652cce6e4b&amp;libs=core&amp;mid=15&amp;parent=https://sites.google.com/site/tyronesgameshack/cat-ninja#up_mode=window&amp;up_flashvars&amp;up_bg&amp;up_url=https://sites.google.com/site/swfdump5/swf/Cat_Ninja_February_5th_2014.swf?attredirects%3D0&amp;up_base&amp;st=e%3DAIHE3cAqKoNTB%252Fjibch7J59%252BG7uIvYl9M4DLsm%252F8SVwHnoe1ppABE7iCyIsLZTkqM4D%252FGW9KWz1BixXey3pR1isYSvfkjBQW9nLcF49p7HRIpC0E7rypPK6%252BQXpsQF7NNi9WF3rX8Xjt%26c%3Denterprise&amp;rpctoken=-4409920825266263376"></iframe>
+ <button class="button" onclick="fullscreenChange()"><img src="https://cdn2.iconfinder.com/data/icons/user-interface-46/256/menu_fullscreen-512.png" width="50" height="50"></button>
+  </div>
+
+
+
+  <script type="text/javascript">
+  {
+  var button = document.querySelector('#container .button');
+button.addEventListener('click', fullscreen);
+// when you are in fullscreen, ESC and F11 may not be trigger by keydown listener. 
+// so don't use it to detect exit fullscreen
+document.addEventListener('keydown', function (e) {
+  console.log('key press' + e.keyCode);
+});
+// detect enter or exit fullscreen mode
+document.addEventListener('webkitfullscreenchange', fullscreenChange);
+document.addEventListener('mozfullscreenchange', fullscreenChange);
+document.addEventListener('fullscreenchange', fullscreenChange);
+document.addEventListener('MSFullscreenChange', fullscreenChange);
+
+function fullscreen() {
+  // check if fullscreen mode is available
+  if (document.fullscreenEnabled || 
+    document.webkitFullscreenEnabled || 
+    document.mozFullScreenEnabled ||
+    document.msFullscreenEnabled) {
+    
+    // which element will be fullscreen
+    var iframe = document.querySelector('#container iframe');
+    // Do fullscreen
+    if (iframe.requestFullscreen) {
+      iframe.requestFullscreen();
+    } else if (iframe.webkitRequestFullscreen) {
+      iframe.webkitRequestFullscreen();
+    } else if (iframe.mozRequestFullScreen) {
+      iframe.mozRequestFullScreen();
+    } else if (iframe.msRequestFullscreen) {
+      iframe.msRequestFullscreen();
+    }
+  }
+  else {
+    document.querySelector('.error').innerHTML = 'You cannot fullscreen with this browser/computer. If you are in Ms.Blair class in ********* (school name blocked for privacy reasons), see the maker of this website.';
+  }
+}
+
+function fullscreenChange() {
+  if (document.fullscreenEnabled ||
+       document.webkitIsFullScreen || 
+       document.mozFullScreen ||
+       document.msFullscreenElement) {
+    console.log('enter fullscreen');
+  }
+  else {
+    console.log('exit fullscreen');
+  }
+  // force to reload iframe once to prevent the iframe source didn't care about trying to resize the window
+  // comment this line and you will see
+  var iframe = document.querySelector('iframe');
+  iframe.src = iframe.src;
+}
+}
+</script>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = https://games.ytbros.tk;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = games; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://games4u-3.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;a href="https://disqus.com/?ref_noscript"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;comments powered by Disqus.&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;</noscript>
+<script id="dsq-count-scr" src="https://games4u-3.disqus.com/count.js" async="" type="text/javascript"></script>
+                            
+
+
+
+
+</div></div></div>
     </div><div data-silex-type="html" class="editable-style silex-id-1542730020762-1 html-element" style="" title="Games4U "><div class="silex-element-content">Pages
 <button>
 <a href="/moto-x3m">Moto X3M</a>
