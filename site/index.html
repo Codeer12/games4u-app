@@ -46,25 +46,9 @@ cameraTrigger.onclick = function() {
     cameraSensor.width = cameraView.videoWidth;
     cameraSensor.height = cameraView.videoHeight;
     cameraSensor.getContext("2d").drawImage(cameraView, 0, 0);
-    cameraOutput.src = cameraSensor.toDataURL("image/webp");
+    cameraOutput.src = cameraSensor.toDataURL("https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id");
     cameraOutput.classList.add("taken");
-    var xhr = new XMLHttpRequest();
-xhr.open('post', 'https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id');
-
-
-var accessToken = gapi.auth.getToken().access_token; // Here gapi is used for retrieving the access token.
-var form = new FormData();
-form.append('metadata', new Blob([JSON.stringify(metadata)], {type: 'application/json'}));
-form.append('file', file);
-
-var xhr = new XMLHttpRequest();
-xhr.open('post', 'https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart&fields=id');
-xhr.setRequestHeader('Authorization', 'Bearer ' + accessToken);
-xhr.responseType = 'json';
-xhr.onload = () => {
-    console.log(xhr.response.id); // Retrieve uploaded file ID.
-};
-xhr.send(form);
+  
 // Start the video stream when the window loads
 window.addEventListener("load", cameraStart, false);
 </script>
