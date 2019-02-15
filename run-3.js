@@ -1,4 +1,4 @@
-document.write( '<body class=\"body-initial all-style enable-mobile silex-runtime silex-published\" data-silex-type=\"container\">\n' );
+
 document.write( '    <script src=\"run-3.js\"></script><div class=\"silex-pages\">\n' );
 document.write( '        <div data-silex-type=\"image\" class=\"editable-style silex-id-hamburger-menu image-element menu-button prevent-draggable hide-on-desktop\">\n' );
 document.write( '            <img alt=\"open mobile menu\" src=\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAoCAYAAAC8cqlMAAAB5UlEQVR42u2ZPWvCUBSGM+UfFO3e3dLu/QN+oKj4EUXRQREEJYgoiCAu6qCogyDo7iJ21UUaKqEgCC4iiEMGB3UVgsnpTWj/wfVK2nvhGbKEPJyT996TMMzPGg6H5mKx+GgkyuWyeTQasb8OTDwef4tEIp8+n+/LYIjJZJJHQiwzm81M6OLDarWqNpsNjEYgEJCy2ewT0+/3TagighElNFAnQT6ft1ARKkJFqMgfFvF4PFpuEwFtdrcRqVarIIoirFYrIiyXSxiPx+B2u/GJBINBuF6vQHopigK1Wg2fCMdxcLlciIuoqgqNRgOfiN1uB3Qwg91uB8fjkQiHwwEmkwne1qLxS0VuKKJle71eh06nQ4Rmswk8z+MVcTqdsNlsQJZlotF7Pp8hk8ngE4lGo/qN7xG/vV4Pb0Xm8zlxkdPpBGgMx/+yJxIJKBQKRMjlcuBwOGhq/Q+RcDgMsViMCFrAuFwu/CKDwQC22y1IkkSE/X4PgiDo+xc2Ea0S9zjGa/Hb7Xbxifj9fj0K7yFSqVTwtlY6nYbpdKpPiSRYLBbQarX0PYymFhWhIlSEilCRW6GdyUqlkoVZr9dsKpXiOY6TtW+7BkNBz/7ebrcf9L+6Xq+XRYPMMyrTq5EIhUIvaAjTJb4BBNQ2yhnth0wAAAAASUVORK5CYII=\" class=\"silex-element-content\">\n' );
@@ -87,4 +87,4 @@ document.write( '<button>\n' );
 document.write( '    <a href=\"/news\">News</a>\n' );
 document.write( '</button></div></div>\n' );
 document.write( '    \n' );
-document.write( '</body>' );
+
