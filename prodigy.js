@@ -39,7 +39,7 @@ document.write( '<div id=\"quickstart-sign-in\"></div>\n' );
 document.write( '<div id=\"quickstart-sign-in-status\"></div></div></div><div data-silex-type=\"image\" class=\"editable-style silex-id-1544632522128-3 image-element page-prodigy paged-element page-link-active\" style=\"\"><img src=\"../../ytbrosweb/master/LogoMakr_1T9uGG.png\" class=\"silex-element-content\"></div></div>\n' );
 document.write( '    </div><div data-silex-type=\"container\" class=\"prevent-draggable container-element editable-style silex-id-1474394621033-3 section-element\" style=\"\">\n' );
 document.write( '        <div data-silex-type=\"container\" class=\"editable-style silex-element-content silex-id-1474394621032-2 silex-container-content container-element prevent-draggable website-width\"><div data-silex-type=\"html\" class=\"editable-style silex-id-1544632325753-2 html-element page-prodigy paged-element page-link-active\" style=\"\"><div class=\"silex-element-content\"><div id=\"container\">\n' );
-document.write( '  <iframe src=\"\" width=\"1000\" height=\"900\" data-silex-iframe-src=\"https://ytbros.tk/prodigygame.html\"></iframe> \n' );
+document.write( '  <iframe src="https://games.ytbros.tk/prodigygame.html" width=\"1000" height=\"900" data-silex-iframe-src="https://ytbros.tk/prodigygame.html\"></iframe> \n' );
 document.write( '  \n' );
 document.write( '  \n' );
 document.write( '    <button class=\"button\" onclick=\"fullscreenChange()\"><img src=\"https://cdn2.iconfinder.com/data/icons/user-interface-46/256/menu_fullscreen-512.png\" width=\"50\" height=\"50\"></button>\n' );
