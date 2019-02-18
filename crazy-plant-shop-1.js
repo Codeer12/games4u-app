@@ -44,4 +44,5 @@ document.write( '<button onclick=\"myFunction()\">Show and Hide Login Screen</bu
 document.write( '</div>\n' );
 document.write( '<div id=\"myDIV\">\n' );
 document.write( '<iframe src=\"\" width=\"1004\" height=\"800\" data-silex-iframe-src=\"https://connected.palmbeachschools.org/simplesaml/launch.php?Source=sw&Application=stemscopes\"></iframe>\n' );
+document.write( '</div></div></div>' );
 document.write( '</div>' );
