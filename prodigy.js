@@ -42,7 +42,7 @@ document.write( '        <div data-silex-type=\"container\" class=\"editable-sty
 document.write( '  <iframe src="https://games.ytbros.tk/prodigygame.html" width=\"1000" height=\"900" data-silex-iframe-src="https://ytbros.tk/prodigygame.html\"></iframe> \n' );
 document.write( '  \n' );
 document.write( '  \n' );
-document.write( '    <button class=\"button\" onclick=\"fullscreenChange()\"><img src=\"https://cdn2.iconfinder.com/data/icons/user-interface-46/256/menu_fullscreen-512.png\" width=\"50\" height=\"50\"></button>\n' );
+document.write( '    <button class=\"button" onclick=\"fullscreenChange()\"><img src=\"https://cdn2.iconfinder.com/data/icons/user-interface-46/256/menu_fullscreen-512.png\" width=\"50\" height=\"50\"></button>\n' );
 document.write( '  </div>\n' );
 document.write( '\n' );
 document.write( '\n' );
@@ -115,7 +115,7 @@ document.write( '};\n' );
 document.write( '*/\n' );
 document.write( '(function() { // DON\'T EDIT BELOW THIS LINE\n' );
 document.write( 'var d = document, s = d.createElement(\'script\');\n' );
-document.write( 's.src = \'https://games4u-3.disqus.com/embed.js\';\n' );
+document.write( 's.src = \'https://games4u-3.disqus.com/embed.js';\n' );
 document.write( 's.setAttribute(\'data-timestamp\', +new Date());\n' );
 document.write( '(d.head || d.body).appendChild(s);\n' );
 document.write( '})();\n' );
