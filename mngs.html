@@ -18,7 +18,10 @@
     
 
     
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.2" data-silex-viewport=""><meta name="description" content="The best way to play games!!!!!!! (Winter Update #3)"><link href="css/favicon-16x16.png" rel="shortcut icon"><meta name="hostingProvider" content="ghpages"><meta name="websiteUrl" content="https://games.ytbros.tk/"><!-- Silex HEAD tag do not remove --><!-- End of Silex HEAD tag do not remove --><script src="js/script.js" type="text/javascript"></script><link href="css/styles.css" rel="stylesheet" type="text/css"><style>body { opacity: 0; transition: .25s opacity ease; }</style></head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.2" data-silex-viewport=""><meta name="description" content="The best way to play games!!!!!!! (Winter Update #3)"><link href="css/favicon-16x16.png" rel="shortcut icon"><meta name="hostingProvider" content="ghpages"><meta name="websiteUrl" content="https://codeer12.github.io/backdrop/"><!-- Silex HEAD tag do not remove -->
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
+
+<!-- End of Silex HEAD tag do not remove --><script src="js/script.js" type="text/javascript"></script><link href="css/styles.css" rel="stylesheet" type="text/css"><style>body { opacity: 0; transition: .25s opacity ease; }</style></head>
 
 <body class="body-initial all-style enable-mobile silex-runtime silex-published" data-silex-type="container">
     <div class="silex-pages">
@@ -56,56 +59,63 @@
 
 
 <div class="prevent-draggable container-element editable-style silex-id-1478366444112-1 section-element" style="" data-silex-type="container">
-        <div class="editable-style silex-element-content silex-id-1478366444112-0 silex-container-content container-element prevent-draggable website-width" data-silex-type="container"><div class="editable-style silex-id-1545614796221-2 html-element" style="" data-silex-type="html"><div class="silex-element-content">
-<div id="quickstart-account-details"></div>
-<div id="quickstart-sign-in"></div>
-<div id="quickstart-sign-in-status"></div></div></div><div class="editable-style silex-id-1546277089495-0 image-element page-mngs paged-element page-link-active" style="" data-silex-type="image"><img class="silex-element-content" src="assets/Games4U%20Collab%20with%20Max%20Neighborhood%20Grocery%20Store.png"></div></div>
+        <div class="editable-style silex-element-content silex-id-1478366444112-0 silex-container-content container-element prevent-draggable website-width" data-silex-type="container"><div class="editable-style silex-id-1545614796221-2 html-element" style="" data-silex-type="html"><div class="silex-element-content"><header>
+<div classname="wrapper">
+
+      <h1>Games4U</h1>
+      {this.state.user ?
+        <button onclick="{this.logout}">Logout</button>                
+        :
+        <button onclick="{this.login}">Log In</button>              
+      }
+    </div>
+  </header></div></div><div class="editable-style silex-id-1546277089495-0 image-element page-mngs paged-element page-link-active" style="" data-silex-type="image"><img class="silex-element-content" src="assets/Games4U%20Collab%20with%20Max%20Neighborhood%20Grocery%20Store.png"></div></div>
     </div><div class="prevent-draggable container-element editable-style silex-id-1474394621033-3 section-element" style="" data-silex-type="container">
         <div class="editable-style silex-element-content silex-id-1474394621032-2 silex-container-content container-element prevent-draggable website-width" data-silex-type="container"><div class="editable-style silex-id-1546277305489-1 html-element page-mngs paged-element page-link-active" style="" data-silex-type="html"><div class="silex-element-content"><iframe width="1000" height="800" src="https://maxneighborhoodgrocery.business.site/"></iframe></div></div></div>
     </div><div title="Games4U " class="editable-style silex-id-1542730020762-1 html-element" style="" data-silex-type="html"><div class="silex-element-content">Pages
 <button>
-<a href="/moto-x3m">Moto X3M</a>
+<a href="backdrop/moto-x3m">Moto X3M</a>
 </button>
 
 <button>
-<a href="/strike-force-heroes">Strike Force Heroes</a>
+<a href="backdrop/strike-force-heroes">Strike Force Heroes</a>
 </button>
 
 <button>
-<a href="/gun-mayhem">Gun Mayhem</a>
+<a href="backdrop/gun-mayhem">Gun Mayhem</a>
 </button>
 <button>
-<a href="/rogue-soul-2">Rogue Soul 2</a>
+<a href="backdrop/rogue-soul-2">Rogue Soul 2</a>
 </button>
 <button>
-<a href="/">Home</a>
-</button>
-
-<button>
-<a href="/alex-mixer-stream">Alex Mixer Stream</a>
-</button>
-<button>
-<a href="/dbz-devolution">DBZ Devolution</a>
-</button>
-<button>
-<a href="/chat">Chat</a>
-</button>
-<button>
-<a href="/prodigy">Prodigy</a>
-</button>
-<button>
-<a href="/super-smash-flash-2">Super Smash Flash 2 (finally!)</a>
+<a href="backdrop/">Home</a>
 </button>
 
 <button>
- <a href="/cat-ninja">Cat Ninja</a>
+<a href="backdrop/alex-mixer-stream">Alex Mixer Stream</a>
+</button>
+<button>
+<a href="backdrop/dbz-devolution">DBZ Devolution</a>
+</button>
+<button>
+<a href="backdrop/chat">Chat</a>
+</button>
+<button>
+<a href="backdrop/prodigy">Prodigy</a>
+</button>
+<button>
+<a href="backdrop/super-smash-flash-2">Super Smash Flash 2 (finally!)</a>
+</button>
+
+<button>
+ <a href="backdrop/cat-ninja">Cat Ninja</a>
 </button>
 <button>
     
-    <a href="run-3-.html">Run 3</a>
+    <a href="backdrop/run-3-.html">Run 3</a>
 </button>
 <button>
-    <a href="/news">News</a>
+    <a href="backdrop/news">News</a>
 </button>
 <button>                                                                                                                                            
     <a href="https://github.com/Codeer12/ytbrosweb/issues/new/">Report problems (you need a github account)</a>
