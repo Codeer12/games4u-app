@@ -165,7 +165,7 @@ firebase.auth().onAuthStateChanged(user => {
         // [END_EXCLUDE]
         if (user) {
           // User is signed in.
-          var displayName = user.displayName;
+         
           var email = user.email;
       
           // [START_EXCLUDE]
@@ -205,6 +205,7 @@ firebase.auth().onAuthStateChanged(user => {
 
   <iframe src="https://games.ytbros.tk" width="1000" height="600"></iframe>
   <footer>
+    Welcome, <div id="quickstart-account-details"></div> 
 
        
           <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Sign In</button>
