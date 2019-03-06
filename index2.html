@@ -198,6 +198,8 @@ firebase.auth().onAuthStateChanged(user => {
     window.onload = function() {
       initApp();
     };
+  function signout() {
+  firebase.auth().signOut();
   </script>
 </head>
 <body>
@@ -208,7 +210,7 @@ firebase.auth().onAuthStateChanged(user => {
     Welcome, <div id="quickstart-account-details"></div> 
 
        
-          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Sign Out</button>
+          <button class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" onclick="signout()" name="signin">Sign Out</button>
   </footer>
          
          
