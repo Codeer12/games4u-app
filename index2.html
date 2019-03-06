@@ -178,7 +178,7 @@ firebase.auth().onAuthStateChanged(user => {
           // [END_EXCLUDE]
         } else {
           // User is signed out.
-          
+          window.location.href = "https://ytbros.tk"
           // [START_EXCLUDE]
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
           document.getElementById('quickstart-sign-in').textContent = 'Sign in';
@@ -208,7 +208,7 @@ firebase.auth().onAuthStateChanged(user => {
     Welcome, <div id="quickstart-account-details"></div> 
 
        
-          <button disabled class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Sign In</button>
+          <button  class="mdl-button mdl-js-button mdl-button--raised" id="quickstart-sign-in" name="signin">Sign In</button>
   </footer>
          
          
