@@ -4,163 +4,22 @@
     <!-- leave this for stats and Silex version check -->
     <meta name="generator" content="Silex v2.2.8">
     <!-- End of generator meta tag -->
-    <script type="text/javascript" src="https://editor.silex.me/static/2.8/jquery.js" data-silex-static=""></script>
-    <script type="text/javascript" src="https://editor.silex.me/static/2.8/jquery-ui.js" data-silex-static=""></script>
-    <script type="text/javascript" src="https://editor.silex.me/static/2.8/pageable.js" data-silex-static=""></script>
-    <script type="text/javascript" src="https://editor.silex.me/static/2.8/front-end.js" data-silex-static=""></script>
-    <link rel="stylesheet" href="https://editor.silex.me/static/2.8/normalize.css" data-silex-static="">
-    <link rel="stylesheet" href="https://editor.silex.me/static/2.8/front-end.css" data-silex-static="">
+    <script type="text/javascript" src="https://preprod.silex.me/static/2.8/jquery.js" data-silex-static=""></script>
+    <script type="text/javascript" src="https://preprod.silex.me/static/2.8/jquery-ui.js" data-silex-static=""></script>
+    <script type="text/javascript" src="https://preprod.silex.me/static/2.8/pageable.js" data-silex-static=""></script>
+    <script type="text/javascript" src="https://preprod.silex.me/static/2.8/front-end.js" data-silex-static=""></script>
+    <link rel="stylesheet" href="https://preprod.silex.me/static/2.8/normalize.css" data-silex-static="">
+    <link rel="stylesheet" href="https://preprod.silex.me/static/2.8/front-end.css" data-silex-static="">
 
-    <style type="text/css" class="silex-style">html,
-body {height: 100%; margin: 0 auto;}#container {text-align: center; height: 100%;}.button {color: #333; background-color: #fff; border-color: #ccc; font-size: 14px; font-weight: 400; border: 1px solid transparent; border-radius: 4px; cursor: pointer; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; padding: 6px 12px;}.info {padding: 20px;}.error {font-weight: bold; font-size: 20px; padding: 20px;}#Show {visibility: hidden;}</style>
-    <script type="text/javascript" class="silex-script">var button = document.querySelector('#container .button');
-button.addEventListener('click', fullscreen);
-// when you are in fullscreen, ESC and F11 may not be trigger by keydown listener. 
-// so don't use it to detect exit fullscreen
-document.addEventListener('keydown', function (e) {
-  console.log('key press' + e.keyCode);
-});
-// detect enter or exit fullscreen mode
-document.addEventListener('webkitfullscreenchange', fullscreenChange);
-document.addEventListener('mozfullscreenchange', fullscreenChange);
-document.addEventListener('fullscreenchange', fullscreenChange);
-document.addEventListener('MSFullscreenChange', fullscreenChange);
-
-function fullscreen() {
-  // check if fullscreen mode is available
-  if (document.fullscreenEnabled || 
-    document.webkitFullscreenEnabled || 
-    document.mozFullScreenEnabled ||
-    document.msFullscreenEnabled) {
-    
-    // which element will be fullscreen
-    var iframe = document.querySelector('#container iframe');
-    // Do fullscreen
-    if (iframe.requestFullscreen) {
-      iframe.requestFullscreen();
-    } else if (iframe.webkitRequestFullscreen) {
-      iframe.webkitRequestFullscreen();
-    } else if (iframe.mozRequestFullScreen) {
-      iframe.mozRequestFullScreen();
-    } else if (iframe.msRequestFullscreen) {
-      iframe.msRequestFullscreen();
-    }
-  }
-  else {
-    document.querySelector('.error').innerHTML = 'Your browser is not supported';
-  }
-}
-
-function fullscreenChange() {
-  if (document.fullscreenEnabled ||
-       document.webkitIsFullScreen || 
-       document.mozFullScreen ||
-       document.msFullscreenElement) {
-    console.log('enter fullscreen');
-  }
-  else {
-    console.log('exit fullscreen');
-  }
-  // force to reload iframe once to prevent the iframe source didn't care about trying to resize the window
-  // comment this line and you will see
-  var iframe = document.querySelector('iframe');
-  iframe.src = iframe.src;
-}
-
-function btnShowHide() {
-  var x = document.getElementById("Show");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
-    <style class="silex-inline-styles" type="text/css">.body-initial {width: 1200px; top: 15px; left: 100px; min-height: 551px; background-color: transparent; background-image: url('https://games.ytbros.tk/pexels-photo-1054289.jpeg');}.silex-id-1478366444112-1 {top: 5px; background-color: transparent; left: 5px; min-width: 1200px;}.silex-id-1478366444112-0 {min-height: 155px; background-color: transparent; width: 1200px; top: 15px; left: 100px;}.silex-id-1544725358647-0 {width: 440px; min-height: 167px; top: -3px; left: 288px; background-color: rgba(255,255,255,1);}.silex-id-1544621936351-5 {width: 353px; min-height: 164px; top: -14px; left: -105px; background-color: rgba(255,255,255,1);}.silex-id-1544621974987-6 {width: 447px; min-height: 159px; top: -18px; left: -101px; background-color: rgba(255,255,255,1);}.silex-id-1544621814085-2 {width: 370px; min-height: 141px; top: 0px; left: -99px; background-color: rgba(255,255,255,1);}.silex-id-1545614796221-2 {width: 512px; background-color: rgb(255, 255, 255); min-height: 123px; top: 4px; left: 684px;}.silex-id-1544057373810-1 {width: 308px; min-height: 165px; top: -2px; left: 3px; background-color: rgba(255,255,255,1);}.silex-id-1545617120907-3 {width: 253px; min-height: 100px; top: 29px; left: 352px;}.silex-id-1544632522128-3 {width: 337px; min-height: 172px; top: -2px; left: -99px; background-color: rgba(255,255,255,1);}.silex-id-1544840575529-2 {width: 430px; min-height: 153px; top: -12px; left: -96px; background-color: rgba(255,255,255,1);}.silex-id-1545662573585-0 {width: 414px; min-height: 177px; top: -19px; left: -103px; background-color: rgba(255,255,255,1);}.silex-id-1546277089495-0 {width: 703px; min-height: 160px; top: -7px; left: -101px;}.silex-id-1546585685659-0 {width: 703px; min-height: 160px; top: -25px; left: -102px;}.silex-id-1548220184130-0 {width: 393px; min-height: 141px; top: -17px; left: -101px; background-color: rgba(245,241,241,1);}.silex-id-1548220547365-3 {width: 100px; min-height: 100px; top: 46px; left: 142px;}.silex-id-1548768557115-2 {width: 591px; background-color: rgb(255, 255, 255); min-height: 211px; top: -34px; left: -205px; background-image: url('LogoMakr_1T9uGG.png');}.silex-id-1548768659805-3 {width: 425px; min-height: 163px; top: -14px; left: -102px; background-color: rgba(255,255,255,1);}.silex-id-1544621853061-3 {width: 428px; min-height: 147px; top: 3px; left: 0px; background-color: rgba(255,255,255,1);}.silex-id-1544621664826-0 {width: 294px; min-height: 113px; top: 11px; left: 2px; background-color: rgba(255,255,255,1);}.silex-id-1544629082698-0 {width: 402px; min-height: 118px; top: 13px; left: 5px; background-color: rgba(255,255,255,1);}.silex-id-1549028488910-1 {width: 483px; min-height: 199px; top: -18px; left: -4px; background-color: rgba(255,255,255,1);}.silex-id-1474394621033-3 {top: 195px; left: 5px; min-width: 1200px;}.silex-id-1474394621032-2 {min-height: 567px; background-color: transparent; width: 1200px; top: 15px; left: 100px;}.silex-id-1542730964677-3 {width: 1099px; background-color: rgb(255, 255, 255); min-height: 601px; top: -2px; left: 101px;}.silex-id-1542731982142-8 {width: 757px; background-color: rgb(255, 255, 255); min-height: 569px; top: -1px; left: 104px;}.silex-id-1542758270282-1 {width: 631px; background-color: rgb(255, 255, 255); min-height: 357px; top: 0px; left: 100px;}.silex-id-1542758576584-2 {width: 384px; background-color: rgb(255, 255, 255); min-height: 628px; top: -2px; left: 723px;}.silex-id-1544545632298-10 {width: 751px; background-color: rgb(255, 255, 255); min-height: 565px; top: 0px; left: 102px;}.silex-id-1544725494892-1 {width: 1002px; background-color: transparent; min-height: 1719px; top: 1px; left: 121px;}.silex-id-1544629129752-1 {width: 752px; background-color: rgb(255, 255, 255); min-height: 601px; top: 4px; left: 114px;}.silex-id-1545662698820-4 {width: 892px; min-height: 571px; top: -1px; left: 88px;}.silex-id-1546277305489-1 {width: 1008px; background-color: rgba(255,255,255,1); min-height: 808px; top: 4px; left: 87px;}.silex-id-1546586376556-1 {width: 1117px; background-color: rgb(255, 255, 255); min-height: 910px; top: 12px; left: 82px;}.silex-id-1548220247787-1 {width: 471px; min-height: 309px; top: 3px; left: 81px;}.silex-id-1548220502699-2 {width: 400px; height: 400px; background-color: transparent; top: 4px; left: 88px;}.silex-id-1542732186708-9 {width: 749px; background-color: rgb(255, 255, 255); min-height: 565px; top: -1px; left: 83px;}.silex-id-1545403761432-2 {width: 331px; background-color: rgb(255, 255, 255); min-height: 134px; top: 1px; left: 85px;}.silex-id-1542731364248-6 {width: 748px; background-color: rgb(255, 255, 255); min-height: 569px; top: -1px; left: 83px;}.silex-id-1548768679317-4 {width: 753px; background-color: rgb(255, 255, 255); min-height: 569px; top: -1px; left: 87px;}.silex-id-1549658899876-0 {width: 943px; background-color: transparent; min-height: 713px; top: -142px; left: 276px;}.silex-id-1544632325753-2 {width: 1010px; background-color: transparent; min-height: 1633px; top: 17px; left: 83px;}.silex-id-1544840474935-1 {width: 997px; background-color: transparent; min-height: 1901px; top: 57px; left: 92px; background-image: url('IMG_1786.JPG');}.silex-id-1545662677725-2 {min-height: 100px;}.silex-id-1545662677724-1 {min-height: 100px;}.silex-id-1542730020762-1 {width: 88px; background-color: rgb(255, 255, 255); min-height: 592px; top: 209px; left: 101px;}</style>
-    <title>Games4U</title>
-    <script type="text/json" class="silex-json-styles">[{"fonts":[],"desktop":{"body-initial":{"width":"1200px","top":"15px","left":"100px","min-height":"551px","background-color":"transparent","background-image":"url('https://games.ytbros.tk/pexels-photo-1054289.jpeg')"},"silex-id-1474394621033-3":{"top":"195px","left":"5px","min-width":"1200px"},"silex-id-1474394621032-2":{"min-height":"567px","background-color":"transparent","width":"1200px","top":"15px","left":"100px","height":""},"silex-id-1474394605264-1":{"min-height":"100px","width":"100px","top":"100px","left":"100px"},"silex-id-1474394605263-0":{"min-height":"100px","background-color":"transparent"},"silex-id-1478366444112-0":{"min-height":"155px","background-color":"transparent","width":"1200px","top":"15px","left":"100px","height":""},"silex-id-1478366444112-1":{"top":"5px","background-color":"transparent","left":"5px","height":"","min-width":"1200px"},"silex-id-1478366450713-2":{"min-height":"100px","background-color":"transparent","width":"1200px","top":"","left":"","height":""},"silex-id-1542730020762-1":{"width":"88px","background-color":"rgb(255, 255, 255)","min-height":"592px","top":"209px","left":"101px"},"silex-id-1542730964677-3":{"width":"1099px","background-color":"rgb(255, 255, 255)","min-height":"601px","top":"-2px","left":"101px"},"silex-id-1542731364248-6":{"width":"748px","background-color":"rgb(255, 255, 255)","min-height":"569px","top":"-1px","left":"83px"},"silex-id-1542731982142-8":{"width":"757px","background-color":"rgb(255, 255, 255)","min-height":"569px","top":"-1px","left":"104px"},"silex-id-1542732186708-9":{"width":"749px","background-color":"rgb(255, 255, 255)","min-height":"565px","top":"-1px","left":"83px"},"silex-id-1542758270282-1":{"width":"631px","background-color":"rgb(255, 255, 255)","min-height":"357px","top":"0px","left":"100px","border-width":"","border-style":""},"silex-id-1542758576584-2":{"width":"384px","background-color":"rgb(255, 255, 255)","min-height":"628px","top":"-2px","left":"723px"},"silex-id-1544057373810-1":{"width":"308px","min-height":"165px","top":"-2px","left":"3px","background-color":"rgba(255,255,255,1)"},"silex-id-1544545632298-10":{"width":"751px","background-color":"rgb(255, 255, 255)","min-height":"565px","top":"0px","left":"102px"},"silex-id-1544621664826-0":{"width":"294px","min-height":"113px","top":"11px","left":"2px","background-color":"rgba(255,255,255,1)"},"silex-id-1544621814085-2":{"width":"370px","min-height":"141px","top":"0px","left":"-99px","background-color":"rgba(255,255,255,1)"},"silex-id-1544621853061-3":{"width":"428px","min-height":"147px","top":"3px","left":"0px","background-color":"rgba(255,255,255,1)"},"silex-id-1544621936351-5":{"width":"353px","min-height":"164px","top":"-14px","left":"-105px","background-color":"rgba(255,255,255,1)"},"silex-id-1544621974987-6":{"width":"447px","min-height":"159px","top":"-18px","left":"-101px","background-color":"rgba(255,255,255,1)"},"silex-id-1544629082698-0":{"width":"402px","min-height":"118px","top":"13px","left":"5px","background-color":"rgba(255,255,255,1)"},"silex-id-1544629129752-1":{"width":"752px","background-color":"rgb(255, 255, 255)","min-height":"601px","top":"4px","left":"114px"},"silex-id-1544632325753-2":{"width":"1010px","background-color":"transparent","min-height":"1633px","top":"17px","left":"83px"},"silex-id-1544632522128-3":{"width":"337px","min-height":"172px","top":"-2px","left":"-99px","background-color":"rgba(255,255,255,1)"},"silex-id-1544725358647-0":{"width":"440px","min-height":"167px","top":"-3px","left":"288px","background-color":"rgba(255,255,255,1)"},"silex-id-1544725494892-1":{"width":"1002px","background-color":"transparent","min-height":"1719px","top":"1px","left":"121px"},"silex-id-1544840474935-1":{"width":"997px","background-color":"transparent","min-height":"1901px","top":"57px","left":"92px","background-image":"url('IMG_1786.JPG')"},"silex-id-1544840575529-2":{"width":"430px","min-height":"153px","top":"-12px","left":"-96px","background-color":"rgba(255,255,255,1)"},"silex-id-1545403761432-2":{"width":"331px","background-color":"rgb(255, 255, 255)","min-height":"134px","top":"1px","left":"85px"},"silex-id-1545539147229-2":{"width":"","background-color":"","min-height":"100px"},"silex-id-1545614796221-2":{"width":"512px","background-color":"rgb(255, 255, 255)","min-height":"123px","top":"4px","left":"684px"},"silex-id-1545617120907-3":{"width":"253px","min-height":"100px","top":"29px","left":"352px"},"silex-id-1545662573585-0":{"width":"414px","min-height":"177px","top":"-19px","left":"-103px","background-color":"rgba(255,255,255,1)"},"silex-id-1545662677724-1":{"width":"","background-color":"","min-height":"100px"},"silex-id-1545662677725-2":{"min-height":"100px"},"silex-id-1545662698820-4":{"width":"892px","min-height":"571px","top":"-1px","left":"88px"},"silex-id-1546277089495-0":{"width":"703px","min-height":"160px","top":"-7px","left":"-101px"},"silex-id-1546277305489-1":{"width":"1008px","background-color":"rgba(255,255,255,1)","min-height":"808px","top":"4px","left":"87px"},"silex-id-1546585685659-0":{"width":"703px","min-height":"160px","top":"-25px","left":"-102px"},"silex-id-1546586376556-1":{"width":"1117px","background-color":"rgb(255, 255, 255)","min-height":"910px","top":"12px","left":"82px"},"silex-id-1548220184130-0":{"width":"393px","min-height":"141px","top":"-17px","left":"-101px","background-color":"rgba(245,241,241,1)"},"silex-id-1548220247787-1":{"width":"471px","min-height":"309px","top":"3px","left":"81px"},"silex-id-1548220502699-2":{"width":"400px","height":"400px","background-color":"transparent","top":"4px","left":"88px"},"silex-id-1548220547365-3":{"width":"100px","min-height":"100px","top":"46px","left":"142px"},"silex-id-1548768557115-2":{"width":"591px","background-color":"rgb(255, 255, 255)","min-height":"211px","top":"-34px","left":"-205px","background-image":"url('LogoMakr_1T9uGG.png')"},"silex-id-1548768659805-3":{"width":"425px","min-height":"163px","top":"-14px","left":"-102px","background-color":"rgba(255,255,255,1)"},"silex-id-1548768679317-4":{"width":"753px","background-color":"rgb(255, 255, 255)","min-height":"569px","top":"-1px","left":"87px"},"silex-id-1549028488910-1":{"width":"483px","min-height":"199px","top":"-18px","left":"-4px","background-color":"rgba(255,255,255,1)"},"silex-id-1549658899876-0":{"width":"943px","background-color":"transparent","min-height":"713px","top":"-142px","left":"276px"}},"mobile":{},"prodotypeData":{"component":{"silex-id-1548220502699-2":{"name":"form1","templateName":"form","sendTo":"maxgamertv12@gmail.com","label3":"Copyrighted material and page.","placeholder3":"the material.","onsubmit":"Thanks!"}},"style":{"all-style":{"className":"all-style","templateName":"text","displayName":"All style","styles":{"desktop":{"normal":{"className":"all-style","pseudoClass":"normal"}}}}}}}]</script>
+    <style type="text/css" class="silex-style">input.search {border: 1px black solid; padding: 10px; border-radius: 0px;}button.search {padding: 10px; background-color: lightblue; border: 1px black solid; border-radius: 0px;}</style>
+    <script type="text/javascript" class="silex-script"></script>
+    <style class="silex-inline-styles" type="text/css">.body-initial {background-color: rgba(255,255,255,1); background-image: url('download.jpeg');}.silex-id-1478366444112-1 {top: 100px; background-color: transparent; min-height: 100px;}.silex-id-1478366444112-0 {min-height: 100px; background-color: transparent; width: 1200px;}.silex-id-1552670736634-0 {width: 293px; background-color: rgb(255, 255, 255); min-height: 67px; top: 43px; left: 519px;}.silex-id-1474394621033-3 {top: 5px; left: 0px;}.silex-id-1474394621032-2 {min-height: 600px; background-color: transparent; width: 1200px;}.silex-id-1478366450713-3 {top: 100px; background-color: transparent;}.silex-id-1478366450713-2 {min-height: 100px; background-color: transparent; width: 1200px;}.silex-id-1442914737143-3 {min-height: 53px; width: 349px; top: 29px; left: 430px;}</style>
+    <title></title>
+    <script type="text/json" class="silex-json-styles">[{"fonts":[{"family":"'Roboto', sans-serif","href":"https://fonts.googleapis.com/css?family=Roboto"}],"desktop":{"body-initial":{"background-color":"rgba(255,255,255,1)","background-image":"url('download.jpeg')"},"silex-id-1474394621033-3":{"top":"5px","left":"0px"},"silex-id-1474394621032-2":{"min-height":"600px","background-color":"transparent","width":"1200px","top":"","left":"","height":""},"silex-id-1474394605264-1":{"min-height":"100px","width":"100px","top":"100px","left":"100px"},"silex-id-1474394605263-0":{"min-height":"100px","background-color":"transparent"},"silex-id-1442914737143-3":{"min-height":"53px","width":"349px","top":"29px","left":"430px","height":""},"silex-id-1478366444112-0":{"min-height":"100px","background-color":"transparent","width":"1200px","top":"","left":"","height":""},"silex-id-1478366444112-1":{"top":"100px","background-color":"transparent","min-height":"100px","left":"","height":""},"silex-id-1478366450713-2":{"min-height":"100px","background-color":"transparent","width":"1200px","top":"","left":"","height":""},"silex-id-1478366450713-3":{"top":"100px","background-color":"transparent"},"silex-id-1552670736634-0":{"width":"293px","background-color":"rgb(255, 255, 255)","min-height":"67px","top":"43px","left":"519px"}},"mobile":{},"prodotypeData":{"component":{},"style":{"all-style":{"className":"all-style","templateName":"text","displayName":"All style","styles":{"desktop":{"normal":{"className":"all-style","pseudoClass":"normal","All":{"font-family":"'Roboto', sans-serif"}}}}}}}}]</script>
 
     
-<style class="silex-prodotype-style" type="text/css" data-style-id="all-style"></style><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2.2" data-silex-viewport=""><meta name="publicationPath" content="{&quot;absPath&quot;:&quot;/ce/github/get/ytbrosweb/master&quot;,&quot;isDir&quot;:true,&quot;mime&quot;:&quot;application/octet-stream&quot;,&quot;name&quot;:&quot;master&quot;,&quot;folder&quot;:&quot;ytbrosweb&quot;,&quot;path&quot;:&quot;ytbrosweb/master&quot;,&quot;service&quot;:&quot;github&quot;,&quot;url&quot;:&quot;http://editor.silex.me/ce/github/get/ytbrosweb/master&quot;}"><meta name="description" content="The best way to play games!!!!!!! (Winter Update #3)"><link href="favicon-16x16.png" rel="shortcut icon"><meta name="hostingProvider" content="ghpages"><meta name="websiteUrl" content="https://games.ytbros.tk/"><!-- Silex HEAD tag do not remove --><script src="https://www.gstatic.com/firebasejs/5.8.2/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyA8r2vrQaL3f4Jz1Et09RPvJts2xR_sBOg",
-    authDomain: "login-to-games4u.firebaseapp.com",
-    databaseURL: "https://login-to-games4u.firebaseio.com",
-    projectId: "login-to-games4u",
-    storageBucket: "login-to-games4u.appspot.com",
-    messagingSenderId: "152743638512"
-  };
-  firebase.initializeApp(config);
-</script>
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-4912447307997749",
-    enable_page_level_ads: true
-  });
-</script>
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131372284-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-131372284-1');
-</script>
-<script>
-function initApp() {
-      // Listening for auth state changes.
-      // [START authstatelistener]
-      firebase.auth().onAuthStateChanged(function(user) {
-        // [START_EXCLUDE silent]
-        document.getElementById('quickstart-verify-email').disabled = true;
-        // [END_EXCLUDE]
-        if (user) {
-          // User is signed in.
-          var displayName = user.displayName;
-          var email = user.email;
-          var emailVerified = user.emailVerified;
-          var photoURL = user.photoURL;
-          var isAnonymous = user.isAnonymous;
-          var uid = user.uid;
-          var providerData = user.providerData;
-          // [START_EXCLUDE]
-          document.getElementById('quickstart-sign-in-status').textContent = 'Signed in';
-          document.getElementById('quickstart-sign-in').textContent = 'Sign out';
-          document.getElementById('quickstart-account-details').textContent = JSON.stringify(user, null, '  ');
-          if (!emailVerified) {
-            document.getElementById('quickstart-verify-email').disabled = false;
-          }
-          // [END_EXCLUDE]
-        } else {
-          // User is signed out.
-           window.location.href == "https://ytbros.tk/"
-          
-          // [START_EXCLUDE]
-          document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
-          document.getElementById('quickstart-sign-in').textContent = 'Sign in';
-          document.getElementById('quickstart-account-details').textContent = 'null';
-          // [END_EXCLUDE]
-        }
-        // [START_EXCLUDE silent]
-        document.getElementById('quickstart-sign-in').disabled = false;
-        // [END_EXCLUDE]
-      });
-      // [END authstatelistener]
-      document.getElementById('quickstart-sign-in').addEventListener('click', toggleSignIn, false);
-      document.getElementById('quickstart-sign-up').addEventListener('click', handleSignUp, false);
-      document.getElementById('quickstart-verify-email').addEventListener('click', sendEmailVerification, false);
-      document.getElementById('quickstart-password-reset').addEventListener('click', sendPasswordReset, false);
-    }
-    window.onload = function() {
-      initApp();
-    };
-    </h
-<!-- End of Silex HEAD tag do not remove --></head>
+<style class="silex-prodotype-style" type="text/css" data-style-id="all-style">.text-element > .silex-element-content {font-family: 'Roboto', sans-serif;}</style><link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" class="silex-custom-font"><meta name="viewport" content="width=device-width, initial-scale=1"><!-- Silex HEAD tag do not remove --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- End of Silex HEAD tag do not remove --></head>
 
 <body data-silex-id="body-initial" class="body-initial all-style enable-mobile silex-runtime" data-silex-type="container">
     <div class="silex-pages">
@@ -168,7 +27,7 @@ function initApp() {
             <img alt="open mobile menu" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAoCAYAAAC8cqlMAAAB5UlEQVR42u2ZPWvCUBSGM+UfFO3e3dLu/QN+oKj4EUXRQREEJYgoiCAu6qCogyDo7iJ21UUaKqEgCC4iiEMGB3UVgsnpTWj/wfVK2nvhGbKEPJyT996TMMzPGg6H5mKx+GgkyuWyeTQasb8OTDwef4tEIp8+n+/LYIjJZJJHQiwzm81M6OLDarWqNpsNjEYgEJCy2ewT0+/3TagighElNFAnQT6ft1ARKkJFqMgfFvF4PFpuEwFtdrcRqVarIIoirFYrIiyXSxiPx+B2u/GJBINBuF6vQHopigK1Wg2fCMdxcLlciIuoqgqNRgOfiN1uB3Qwg91uB8fjkQiHwwEmkwne1qLxS0VuKKJle71eh06nQ4Rmswk8z+MVcTqdsNlsQJZlotF7Pp8hk8ngE4lGo/qN7xG/vV4Pb0Xm8zlxkdPpBGgMx/+yJxIJKBQKRMjlcuBwOGhq/Q+RcDgMsViMCFrAuFwu/CKDwQC22y1IkkSE/X4PgiDo+xc2Ea0S9zjGa/Hb7Xbxifj9fj0K7yFSqVTwtlY6nYbpdKpPiSRYLBbQarX0PYymFhWhIlSEilCRW6GdyUqlkoVZr9dsKpXiOY6TtW+7BkNBz/7ebrcf9L+6Xq+XRYPMMyrTq5EIhUIvaAjTJb4BBNQ2yhnth0wAAAAASUVORK5CYII=" class="silex-element-content">
         </div>
 
-        <a id="page-page-1" data-silex-type="page" class="page-element" href="#!page-page-1">Page 1</a><a id="page-moto-x3m" data-silex-type="page" class="page-element" href="#!page-moto-x3m">Moto X3M</a><a id="page-strike-force-heroes" data-silex-type="page" class="page-element" href="#!page-strike-force-heroes">Strike Force Heroes</a><a id="page-gun-mayhem" data-silex-type="page" class="page-element" href="#!page-gun-mayhem">Gun Mayhem</a><a id="page-rogue-soul-2" data-silex-type="page" class="page-element" href="#!page-rogue-soul-2">Rogue Soul 2</a><a id="page-alex-stream" data-silex-type="page" class="page-element" href="#!page-alex-stream">alex stream</a><a id="page-dbz-devolution" data-silex-type="page" class="page-element" href="#!page-dbz-devolution">DBZ Devolution</a><a id="page-chat-" data-silex-type="page" class="page-element" href="#!page-chat-">Chat </a><a id="page-prodigy" data-silex-type="page" class="page-element" href="#!page-prodigy">Prodigy</a><a id="page-crazy-plant-shop" data-silex-type="page" class="page-element" href="#!page-crazy-plant-shop">Crazy Plant Shop</a><a id="page-super-smash-flash-2" data-silex-type="page" class="page-element" href="#!page-super-smash-flash-2">Super Smash Flash 2</a><a id="page-news" data-silex-type="page" class="page-element" href="#!page-news">News</a><a id="page-mngs" data-silex-type="page" class="page-element" href="#!page-mngs">MNGS</a><a id="page-mngs-order-to-pickup" data-silex-type="page" class="page-element" href="#!page-mngs-order-to-pickup">MNGS Order to Pickup</a><a id="page-about" data-silex-type="page" class="page-element" href="#!page-about">About</a><a id="page-copyright-application" data-silex-type="page" class="page-element" href="#!page-copyright-application">Copyright Application</a><a id="page-run-3-" data-silex-type="page" class="page-element" href="#!page-run-3-">Run 3 </a><a id="page-cat-ninja" href="#!page-cat-ninja" data-silex-type="page" class="page-element">Cat Ninja</a></div>
+        <a id="page-page-1" data-silex-type="page" class="page-element" href="#!page-page-1">Page 1</a></div>
 
 
 
@@ -178,9 +37,23 @@ function initApp() {
 
 
 
-    
-    
-    
+    <div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1478366444112-1 section-element" data-silex-id="silex-id-1478366444112-1" style="">
+        <div data-silex-type="container" class="editable-style silex-element-content silex-id-1478366444112-0 silex-container-content container-element prevent-draggable website-width" data-silex-id="silex-id-1478366444112-0"><div data-silex-type="html" class="editable-style silex-id-1552670736634-0 html-element" data-silex-id="silex-id-1552670736634-0"><div class="silex-element-content"><form action="/youpage.php"> <input type="text" placeholder="Search.." name="search" class="search"> <button type="submit" class="search"><i class="fa fa-search">Search</i></button> </form></div></div></div>
+    </div>
+    <div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1474394621033-3 section-element" data-silex-id="silex-id-1474394621033-3" style="">
+        <div data-silex-type="container" class="editable-style silex-element-content silex-id-1474394621032-2 silex-container-content container-element prevent-draggable website-width" data-silex-id="silex-id-1474394621032-2"></div>
+    </div>
+    <div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1478366450713-3 section-element" data-silex-id="silex-id-1478366450713-3" style="">
+        <div data-silex-type="container" class="editable-style silex-element-content silex-id-1478366450713-2 silex-container-content container-element prevent-draggable website-width" data-silex-id="silex-id-1478366450713-2">
+
+            <div data-silex-id="silex-id-1442914737143-3" class="editable-style silex-id-1442914737143-3 text-element" data-silex-type="text" style="">
+                <div class="silex-element-content normal">
+                    <br>
+                    <div style="text-align: center;"><a href="//www.silex.me/">Powered by Silex</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -197,329 +70,4 @@ function initApp() {
 
 
 
-<div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1478366444112-1 section-element" data-silex-id="silex-id-1478366444112-1" style="">
-        <div data-silex-type="container" class="editable-style silex-element-content silex-id-1478366444112-0 silex-container-content container-element prevent-draggable website-width" data-silex-id="silex-id-1478366444112-0"><div data-silex-type="image" class="editable-style silex-id-1544725358647-0 image-element page-crazy-plant-shop paged-element" data-silex-id="silex-id-1544725358647-0" style=""><img src="LogoMakr_1T9uGG.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1544621936351-5 image-element page-moto-x3m paged-element" data-silex-id="silex-id-1544621936351-5" style=""><img src="LogoMakr_1T9uGG.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1544621974987-6 image-element page-strike-force-heroes paged-element" data-silex-id="silex-id-1544621974987-6" style=""><img src="LogoMakr_1T9uGG.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1544621814085-2 image-element page-rogue-soul-2 paged-element" data-silex-id="silex-id-1544621814085-2" style=""><img src="LogoMakr_1T9uGG.png" class="silex-element-content"></div><div data-silex-type="html" class="editable-style silex-id-1545614796221-2 html-element" data-silex-id="silex-id-1545614796221-2" style=""><div class="silex-element-content">
-<div id="quickstart-account-details"></div>
-<div id="quickstart-sign-in"></div>
-<div id="quickstart-sign-in-status"></div></div></div><div data-silex-type="image" class="editable-style silex-id-1544057373810-1 image-element page-alex-stream paged-element" data-silex-id="silex-id-1544057373810-1" style=""><img src="LogoMakr_1T9uGG.png" class="silex-element-content"></div><div data-silex-type="text" class="editable-style silex-id-1545617120907-3 text-element page-rogue-soul-2 paged-element" data-silex-id="silex-id-1545617120907-3" style=""><div class="silex-element-content normal"><p>Rogue Soul 2</p><p><br></p></div></div><div data-silex-type="image" class="editable-style silex-id-1544632522128-3 image-element page-prodigy paged-element" data-silex-id="silex-id-1544632522128-3" style=""><img src="LogoMakr_1T9uGG.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1544840575529-2 image-element page-super-smash-flash-2 paged-element" data-silex-id="silex-id-1544840575529-2" style=""><img src="http://editor.silex.me/ce/github/get/ytbrosweb/master/LogoMakr_1T9uGG.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1545662573585-0 image-element page-news paged-element" data-silex-id="silex-id-1545662573585-0" style=""><img src="LogoMakr_1T9uGG.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1546277089495-0 image-element page-mngs paged-element" data-silex-id="silex-id-1546277089495-0" style=""><img src="Games4U%20Collab%20with%20Max%20Neighborhood%20Grocery%20Store.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style image-element silex-id-1546585685659-0 page-mngs-order-to-pickup paged-element" data-silex-id="silex-id-1546585685659-0" style=""><img src="Games4U%20Collab%20with%20Max%20Neighborhood%20Grocery%20Store.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1548220184130-0 image-element page-about paged-element" data-silex-id="silex-id-1548220184130-0" style=""><img src="LogoMakr_1T9uGG.png" class="silex-element-content"></div><div data-silex-type="text" class="editable-style silex-id-1548220547365-3 text-element page-copyright-application paged-element" data-silex-id="silex-id-1548220547365-3" style=""><div class="silex-element-content normal"><p>Copyright Application</p></div></div><div data-silex-type="container" class="editable-style silex-id-1548768557115-2 container-element page-page-1 paged-element" data-silex-id="silex-id-1548768557115-2" style=""></div><div data-silex-type="image" class="editable-style silex-id-1548768659805-3 image-element page-run-3- paged-element" data-silex-id="silex-id-1548768659805-3" style=""><img src="LogoMakr_1T9uGG.png" class="silex-element-content"></div></div>
-    <div data-silex-type="image" class="editable-style silex-id-1544621853061-3 image-element page-gun-mayhem paged-element" data-silex-id="silex-id-1544621853061-3" style=""><img src="LogoMakr_1T9uGG.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1544621664826-0 image-element page-dbz-devolution paged-element" data-silex-id="silex-id-1544621664826-0" style=""><img src="LogoMakr_1T9uGG.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1544629082698-0 image-element paged-element page-chat-" data-silex-id="silex-id-1544629082698-0" style=""><img src="LogoMakr_1T9uGG.png" class="silex-element-content"></div><div data-silex-type="image" class="editable-style silex-id-1549028488910-1 image-element page-cat-ninja paged-element" data-silex-id="silex-id-1549028488910-1"><img src="LogoMakr_1T9uGG.png" class="silex-element-content"></div></div><div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1474394621033-3 section-element" data-silex-id="silex-id-1474394621033-3" style="">
-        <div data-silex-type="container" class="editable-style silex-element-content silex-id-1474394621032-2 silex-container-content container-element prevent-draggable website-width" data-silex-id="silex-id-1474394621032-2"><div data-silex-type="html" class="editable-style silex-id-1542730964677-3 html-element page-moto-x3m paged-element" data-silex-id="silex-id-1542730964677-3" style=""><div class="silex-element-content"><object data="https://motox3m.org/upload/swf/MotoX3M.swf" width="720" height="480"></object></div></div><div data-silex-type="html" class="editable-style silex-id-1542731982142-8 html-element page-gun-mayhem paged-element" data-silex-id="silex-id-1542731982142-8" style=""><div class="silex-element-content"><iframe src="" width="748" height="561" data-silex-iframe-src="https://codeer12.github.io/youtubebros/Gun%20Mayhem.html"><source src="https://codeer12.github.io/youtubebros/Gun%20Mayhem.html" /></iframe></div></div><div data-silex-type="html" class="editable-style silex-id-1542758270282-1 html-element page-alex-stream paged-element" data-silex-id="silex-id-1542758270282-1" style=""><div class="silex-element-content"><iframe allowfullscreen="true" src="" width="620" height="349" data-silex-iframe-src="https://mixer.com/embed/player/YearlongBog6306?disableLowLatency=1"> </iframe>
-</div></div><div data-silex-type="html" class="editable-style silex-id-1542758576584-2 html-element page-alex-stream paged-element" data-silex-id="silex-id-1542758576584-2" style=""><div class="silex-element-content"><iframe src="" width="378" height="620" data-silex-iframe-src="https://mixer.com/embed/chat/YearlongBog6306"></iframe></div></div><div data-silex-type="html" class="editable-style silex-id-1544545632298-10 html-element page-dbz-devolution paged-element" data-silex-id="silex-id-1544545632298-10" style=""><div class="silex-element-content"><iframe src="" width="748" height="561" data-silex-iframe-src="http://games.ytbros.tk/dbzdevolution.html">&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/object&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;</iframe></div></div><div data-silex-type="html" class="editable-style silex-id-1544725494892-1 html-element page-crazy-plant-shop paged-element" data-silex-id="silex-id-1544725494892-1" style=""><div class="silex-element-content"><div>
-<iframe src="" width="1000" height="900" data-silex-iframe-src="https://app.acceleratelearning.com/student_games/4"></iframe>
-<button onclick="myFunction()">Show and Hide Login Screen</button>
-</div>
-<div id="myDIV">
-<iframe src="" width="1004" height="800" data-silex-iframe-src="https://connected.palmbeachschools.org/simplesaml/launch.php?Source=sw&amp;Application=stemscopes"></iframe>
-</div>
-<script type="text/javascript">
-function myFunction() {
-  var x = document.getElementById("myDIV");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
-  }
-}
-</script>
-
-</div></div><div data-silex-type="html" class="editable-style silex-id-1544629129752-1 html-element paged-element page-chat-" data-silex-id="silex-id-1544629129752-1" style=""><div class="silex-element-content"><iframe src="" width="100%" height="800" data-silex-iframe-src="https://docs.google.com/document/d/1aSKQtcUWVWib4dEQgaB_rEwhjOrlb3dMs65EyJwhrcU/edit?usp=sharing"></iframe></div></div><div data-silex-type="text" class="editable-style silex-id-1545662698820-4 text-element page-news paged-element" data-silex-id="silex-id-1545662698820-4" style=""><div class="silex-element-content normal"><p>News.</p><p>We are on Winter Update #3, which features Prodigy in fullscreen, and a method to playing Crazy Plant Shop!&nbsp; (the method is so cool)</p><p>Ads:</p><p>I have got rid of&nbsp; copyright and are on our way for ad support (pay-per-click).</p><p>Analytics:</p><p>I am able to see what page you are on and how long to improve flow of data, so I can fix games!</p><p>Disqus:<br>A chat and and a suggestion box under or by select games.</p><p>Fullscreen:</p><p>Fullscreen is now supported on select games.</p></div></div><div data-silex-type="html" class="editable-style silex-id-1546277305489-1 html-element page-mngs paged-element" data-silex-id="silex-id-1546277305489-1" style=""><div class="silex-element-content"><iframe src="" width="1000" height="800" data-silex-iframe-src="https://maxneighborhoodgrocery.business.site/"></iframe></div></div><div data-silex-type="html" class="editable-style silex-id-1546586376556-1 html-element page-mngs-order-to-pickup paged-element" data-silex-id="silex-id-1546586376556-1" style=""><div class="silex-element-content"><iframe src="" width="1000" height="800" data-silex-iframe-src="https://www.pointy.com/shops/usa/florida/lantana/max-neighborhood-grocery-store"></iframe></div></div><div data-silex-type="text" class="editable-style silex-id-1548220247787-1 text-element page-about paged-element" data-silex-id="silex-id-1548220247787-1" style=""><div class="silex-element-content normal"><p>Games4U, is a friendly website in which has games, and a featured streamer (we do not endorse this streamer). If you unfortunatly, if you have a problem, visit our "Copyright Application" page for copyrighted material, and "Contact Owner" for anything else.</p></div></div><div data-silex-type="html" class="editable-style silex-id-1548220502699-2 html-element silex-component silex-component-form silex-use-height-not-minheight page-copyright-application paged-element" data-silex-id="silex-id-1548220502699-2" style=""><div class="silex-element-content"><form id="id_1548220645415_762" action="https://formspree.io/maxgamertv12@gmail.com" method="POST" onsubmit="return onsubmit_1548220645415_762(event);">
-  
-  <div>
-    <label for="field1">Name</label>
-    <input type="text" required="" id="field1" name="field1" placeholder="Your name">
-  </div>
-  
-  
-  <div>
-    <label for="field2">Your email adress</label>
-    <input type="text" required="" id="field2" name="field2" placeholder="your@email.com">
-  </div>
-  
-  
-  <div class="fill-vertical">
-    <label for="field3">Copyrighted material and page.</label>
-    <textarea required="" id="field3" name="field3" placeholder="the material."></textarea>
-  </div>
-  
-  <input type="submit" value="Send">
-</form>
-<style>#id_1548220645415_762 input[type=text], select {width: 100%; padding: 12px 20px; margin: 8px 0; display: inline-block; border: 1px solid #ccc; border-radius: 3px; box-sizing: border-box;}#id_1548220645415_762 input[type=submit] {width: 100%; background-color: #4CAF50; color: #FFFFFF; padding: 14px 20px; margin: 8px 0; border: 1px solid #4CAF50; border-radius: 3px; cursor: pointer;}#id_1548220645415_762 label {color: #000000;}#id_1548220645415_762 .fill-vertical {flex: 1 1 auto; display: flex; flex-direction: column;}#id_1548220645415_762 .fill-vertical textarea {flex: 1 1 auto; width: 100%; height: 150px; padding: 12px 20px; box-sizing: border-box; border: 2px solid #ccc; border-radius: 3px; background-color: #f8f8f8; font-size: 16px; resize: none;}#id_1548220645415_762 {border-radius: 3px; display: flex; flex-direction: column; justify-content: space-between; height: 100%;}</style>
-
-<script type="text/javascript">
-function onsubmit_1548220645415_762(event) {
-try {
-    Thanks!
-} catch(e) {}
-}
-</script>
-
-</div></div><div data-silex-type="html" class="editable-style silex-id-1542732186708-9 html-element page-rogue-soul-2 paged-element" data-silex-id="silex-id-1542732186708-9" style=""><div class="silex-element-content"><object data="https://codeer12.github.io/youtubebros/6787.swf" width="748" height="561"></object></div></div><div data-silex-type="html" class="editable-style silex-id-1545403761432-2 html-element page-page-1 paged-element" data-silex-id="silex-id-1545403761432-2" style=""><div class="silex-element-content">Welcome to Games4U! To play games, use the redesigned page bar on the side to navigate games!
-Happy Holidays!
-
-Shoutout to LogoMakr <a href="https://logomakr.com/">(https://logomakr.com/)</a> for letting me creating this logo for free (both logo and favicon). You can go create yours at
-<a href="https://logomakr.com/">https://logomakr.com/</a>
-Introducing Websites! 
-To get a website of your own, ask J Camille himself for a website designed and maintained by him.
-The first website availble is for Cerph at <a href="https://codeer12.github.io/cerphmoneus">https://codeer12.github.io/cerphmoneus</a></div></div><div data-silex-type="html" class="editable-style silex-id-1542731364248-6 html-element page-strike-force-heroes paged-element" data-silex-id="silex-id-1542731364248-6" style=""><div class="silex-element-content"><object data="//codeer12.github.io/youtubebros/8217.swf" width="748" height="561"></object></div></div><div data-silex-type="html" class="editable-style silex-id-1548768679317-4 html-element page-run-3- paged-element" data-silex-id="silex-id-1548768679317-4" style=""><div class="silex-element-content"><object id="flashGameSwfO" width="100%" height="480" data="https://run3play.com/run3.swf" type="application/x-shockwave-flash">
-                            <param name="wmode" value="direct">
-                            <param name="movie" value="https://run3play.com/run3.swf">
-                            <param name="menu" value="false">
-                            <param name="allowNetworking" value="internal">
-                            <param name="allowScriptAccess" value="never">
-                            <embed src="https://run3play.com/run3.swf" menu="false" allownetworking="internal" allowscriptaccess="never" width="100%" height="480" type="application/x-shockwave-flash">
-                        </object></div></div><div data-silex-type="html" class="editable-style silex-id-1549658899876-0 html-element page-cat-ninja paged-element" data-silex-id="silex-id-1549658899876-0"><div class="silex-element-content"><div id="container">
-
-<iframe scrolling="no" frameborder="0" id="792499426" name="792499426" allowtransparency="true" class="igm" src="" width="940" height="640" data-silex-iframe-src="https://games.ytbros.tk/catninja.html"></iframe>
- <button class="button" onclick="fullscreenChange()"><img src="https://cdn2.iconfinder.com/data/icons/user-interface-46/256/menu_fullscreen-512.png" width="50" height="50"></button>
-  </div>
-
-
-
-  <script type="text/javascript">
-  {
-  var button = document.querySelector('#container .button');
-button.addEventListener('click', fullscreen);
-// when you are in fullscreen, ESC and F11 may not be trigger by keydown listener. 
-// so don't use it to detect exit fullscreen
-document.addEventListener('keydown', function (e) {
-  console.log('key press' + e.keyCode);
-});
-// detect enter or exit fullscreen mode
-document.addEventListener('webkitfullscreenchange', fullscreenChange);
-document.addEventListener('mozfullscreenchange', fullscreenChange);
-document.addEventListener('fullscreenchange', fullscreenChange);
-document.addEventListener('MSFullscreenChange', fullscreenChange);
-
-function fullscreen() {
-  // check if fullscreen mode is available
-  if (document.fullscreenEnabled || 
-    document.webkitFullscreenEnabled || 
-    document.mozFullScreenEnabled ||
-    document.msFullscreenEnabled) {
-    
-    // which element will be fullscreen
-    var iframe = document.querySelector('#container iframe');
-    // Do fullscreen
-    if (iframe.requestFullscreen) {
-      iframe.requestFullscreen();
-    } else if (iframe.webkitRequestFullscreen) {
-      iframe.webkitRequestFullscreen();
-    } else if (iframe.mozRequestFullScreen) {
-      iframe.mozRequestFullScreen();
-    } else if (iframe.msRequestFullscreen) {
-      iframe.msRequestFullscreen();
-    }
-  }
-  else {
-    document.querySelector('.error').innerHTML = 'You cannot fullscreen with this browser/computer. If you are in Ms.Blair class in ********* (school name blocked for privacy reasons), see the maker of this website.';
-  }
-}
-
-function fullscreenChange() {
-  if (document.fullscreenEnabled ||
-       document.webkitIsFullScreen || 
-       document.mozFullScreen ||
-       document.msFullscreenElement) {
-    console.log('enter fullscreen');
-  }
-  else {
-    console.log('exit fullscreen');
-  }
-  // force to reload iframe once to prevent the iframe source didn't care about trying to resize the window
-  // comment this line and you will see
-  var iframe = document.querySelector('iframe');
-  iframe.src = iframe.src;
-}
-}
-</script>
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = https://games.ytbros.tk;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = games; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://games4u-3.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;a href="https://disqus.com/?ref_noscript"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;comments powered by Disqus.&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;</noscript>
-<script id="dsq-count-scr" src="https://games4u-3.disqus.com/count.js" async="" type="text/javascript"></script>
-                            
-
-
-
-
-</div></div><div data-silex-type="html" class="editable-style silex-id-1544632325753-2 html-element page-prodigy paged-element" data-silex-id="silex-id-1544632325753-2" style=""><div class="silex-element-content"><div id="container">
-  <iframe id="prodigyiframe" src="" width="1000" height="554" data-silex-iframe-src="https://games.ytbros.tk/prodigygame.html"><source src="https://games.ytbros.tk/prodigygame.html"></source></iframe> 
-  <button class="button" onclick="fullscreenChange()"><img src="https://cdn2.iconfinder.com/data/icons/user-interface-46/256/menu_fullscreen-512.png" width="50" height="50"></button>
-  </div>
-
-
-
-  <script type="text/javascript">
-  {
-  var button = document.querySelector('#container .button');
-button.addEventListener('click', fullscreen);
-// when you are in fullscreen, ESC and F11 may not be trigger by keydown listener. 
-// so don't use it to detect exit fullscreen
-document.addEventListener('keydown', function (e) {
-  console.log('key press' + e.keyCode);
-});
-// detect enter or exit fullscreen mode
-document.addEventListener('webkitfullscreenchange', fullscreenChange);
-document.addEventListener('mozfullscreenchange', fullscreenChange);
-document.addEventListener('fullscreenchange', fullscreenChange);
-document.addEventListener('MSFullscreenChange', fullscreenChange);
-
-function fullscreen() {
-  // check if fullscreen mode is available
-  if (document.fullscreenEnabled || 
-    document.webkitFullscreenEnabled || 
-    document.mozFullScreenEnabled ||
-    document.msFullscreenEnabled) {
-    
-    // which element will be fullscreen
-    var iframe = document.getElementById('prodigyiframe');
-    // Do fullscreen
-    if (iframe.requestFullscreen) {
-      iframe.requestFullscreen();
-    } else if (iframe.webkitRequestFullscreen) {
-      iframe.webkitRequestFullscreen();
-    } else if (iframe.mozRequestFullScreen) {
-      iframe.mozRequestFullScreen();
-    } else if (iframe.msRequestFullscreen) {
-      iframe.msRequestFullscreen();
-    }
-  }
-  else {
-    document.querySelector('.error').innerHTML = 'You cannot fullscreen with this browser/computer. If you are in Ms.Blair class in ********* (school name blocked for privacy reasons), see the maker of this website.';
-  }
-}
-
-function fullscreenChange() {
-  if (document.fullscreenEnabled ||
-       document.webkitIsFullScreen || 
-       document.mozFullScreen ||
-       document.msFullscreenElement) {
-    console.log('enter fullscreen');
-  }
-  else {
-    console.log('exit fullscreen');
-  }
-  // force to reload iframe once to prevent the iframe source didn't care about trying to resize the window
-  // comment this line and you will see
-  var iframe = document.querySelector('iframe');
-  iframe.src = iframe.src;
-}
-}
-</script>
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = https://ytbros.tk/#!page-prodigy;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = prodigy4321; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://games4u-3.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;a href="https://disqus.com/?ref_noscript"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;comments powered by Disqus.&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;</noscript>
-<script id="dsq-count-scr" src="https://games4u-3.disqus.com/count.js" async="" type="text/javascript"></script>
-                            
-
-
-</div></div><div data-silex-type="html" class="editable-style silex-id-1544840474935-1 html-element page-super-smash-flash-2 paged-element" data-silex-id="silex-id-1544840474935-1" style=""><div class="silex-element-content"><object type="application/x-shockwave-flash" data="https://supersmashflash2s.com/ssf2v09.swf" width="800" height="600">
-        <param name="movie" value="https://supersmashflash2s.com/ssf2v09.swf">
-    <!--<![endif]-->
-        <a href="http://www.adobe.com/go/getflash">
-            <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" alt="Get Adobe Flash player">
-        </a>
-    <!--[if !IE]>-->
-    </object>
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-
-/**
-*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
-/*
-var disqus_config = function () {
-this.page.url = https://ytbros.tk/#!page-super-smash-flash-2;  // Replace PAGE_URL with your page's canonical URL variable
-this.page.identifier = ssf2games4u1234; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-};
-*/
-(function() { // DON'T EDIT BELOW THIS LINE
-var d = document, s = d.createElement('script');
-s.src = 'https://games4u-3.disqus.com/embed.js';
-s.setAttribute('data-timestamp', +new Date());
-(d.head || d.body).appendChild(s);
-})();
-</script>
-<noscript>Please enable JavaScript to view the &amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;a href="https://disqus.com/?ref_noscript"&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;comments powered by Disqus.&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;lt;/a&amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;amp;gt;</noscript>
-<script id="dsq-count-scr" src="https://games4u-3.disqus.com/count.js" async="" type="text/javascript"></script>
-                            
-</div></div></div>
-    </div><div data-silex-type="container" class="prevent-draggable container-element editable-style silex-id-1545662677725-2 section-element page-news paged-element" data-silex-id="silex-id-1545662677725-2"><div data-silex-type="container" class="editable-style silex-id-1545662677724-1 container-element silex-element-content silex-container-content website-width prevent-draggable" data-silex-id="silex-id-1545662677724-1"></div></div><div data-silex-type="html" class="editable-style silex-id-1542730020762-1 html-element" data-silex-id="silex-id-1542730020762-1" style="" title="Games4U "><div class="silex-element-content">Pages
-<button>
-<a href="/moto-x3m">Moto X3M</a>
-</button>
-
-<button>
-<a href="/strike-force-heroes">Strike Force Heroes</a>
-</button>
-
-<button>
-<a href="/gun-mayhem">Gun Mayhem</a>
-</button>
-<button>
-<a href="/rogue-soul-2">Rogue Soul 2</a>
-</button>
-<button>
-<a href="/">Home</a>
-</button>
-
-<button>
-<a href="/alex-mixer-stream">Alex Mixer Stream</a>
-</button>
-<button>
-<a href="/dbz-devolution">DBZ Devolution</a>
-</button>
-<button>
-<a href="/chat">Chat</a>
-</button>
-<button>
-<a href="/prodigy">Prodigy</a>
-</button>
-<button>
-<a href="/super-smash-flash-2">Super Smash Flash 2 (finally!)</a>
-</button>
-
-<button>
- <a href="/cat-ninja">Cat Ninja</a>
-</button>
-<button>
-    
-    <a href="run-3-.html">Run 3</a>
-</button>
-<button>
-    <a href="/news">News</a>
-</button></div></div></body></html>
+</body></html>
