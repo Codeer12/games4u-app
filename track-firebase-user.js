@@ -15,12 +15,14 @@
               document.getElementById('account-details').textContent = JSON.stringify({
                 displayName: displayName,
                 email: email,
-                emailVerified: emailVerified,
-                phoneNumber: phoneNumber,
+               phoneNumber: phoneNumber,
                 photoURL: photoURL,
-                uid: uid,
-                accessToken: accessToken,
-                providerData: providerData
+               
+              }, null, '  ');
+             document.getElementById('photo').textContent = JSON.stringify({
+                
+               photoURL: photoURL,
+               
               }, null, '  ');
             });
           } else {
