@@ -1,0 +1,104 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <title>Games4U Request a Game</title>
+    <script src="config.js" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header">
+        <h1>Firebase Sample</h1>
+      </div>
+    </div>
+    <div class="container row">
+        <div class="col-xs-12">
+            <h2>Instructions:</h2>
+            <ul>
+                <li>Instructions are below.</li>
+                
+            </ul>
+            
+            <p><strong><a href="https://www.firebase.com/docs/security/guide/user-security.html">Add Security Rules</a></strong></p>
+        </div>
+    </div>
+    <div class="container row">
+      <div class="col-xs-12">
+        <div class="form">
+          <form action="" class="form">
+            <div class="control-group">
+              <label for="first_name">Put the name of the game you would like to be on Games4U</label>
+              <input type="text" name="first_name">
+            </div>
+            <div>
+              <button class="submit btn btn-primary">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+   <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <script>function(){
+  var newscript = document.createElement('script');
+     newscript.type = 'text/javascript';
+     newscript.async = true;
+     newscript.src = 'https://www.gstatic.com/firebasejs/3.0.2/firebase.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(newscript);
+})();
+
+_setFormData = function setFormData (sel, data) {
+  console.info('setting form to data', data);
+  var inputList = document.querySelectorAll(sel + ' [name]');
+  [].forEach.call(inputList, function(input) {
+      console.log(input);
+      if (data[input.name] && data[input.name] !== "undefined") {
+        input.value = data[input.name];
+      }
+  });
+};
+var _fb;
+var fbToForm = function fbToForm (key, sel) {
+     var config = {
+    apiKey: "AIzaSyA8r2vrQaL3f4Jz1Et09RPvJts2xR_sBOg",
+    authDomain: "login-to-games4u.firebaseapp.com",
+    databaseURL: "https://login-to-games4u.firebaseio.com",
+    projectId: "login-to-games4u",
+    storageBucket: "login-to-games4u.appspot.com",
+    messagingSenderId: "152743638512"
+    };
+    _fb = _fb && _fb.name === "fbToForm" ? _fb : firebase.initializeApp(config, "fbToForm");
+    _fb.database().ref('user-data/' + key).on('value', function(snapshot) {
+        _setFormData(sel, snapshot.val());
+    });
+}</script>
+    <script>
+    $.fn.getFormData = function() {
+      var fields = this.find('[name]');
+      var result = {};
+      $.each(fields, function (i, el) {
+        result[el.name] = el.value;
+      });
+      return result;
+    };  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA8r2vrQaL3f4Jz1Et09RPvJts2xR_sBOg",
+    authDomain: "login-to-games4u.firebaseapp.com",
+    databaseURL: "https://login-to-games4u.firebaseio.com",
+    projectId: "login-to-games4u",
+    storageBucket: "login-to-games4u.appspot.com",
+    messagingSenderId: "152743638512"
+  };
+  firebase.initializeApp(config);,
+      };
+      var fb = firebase.initializeApp(config);
+      var user_id;
+      $('.submit').on('click', function (e) {
+        e.preventDefault();
+        var updates = {};
+        user_id = user_id ? user_id : fb.database().ref().child('user-data').push().key;
+        updates[user_id] = $('form').getFormData();
+        fb.database().ref().child('user-data').update(updates);
+      });
+    </script>
+  </body>
+</html>
