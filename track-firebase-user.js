@@ -28,11 +28,11 @@
             });
           } else {
             // User is signed out.
-           
+            window.location.href = "https://ytbros.tk";
             document.getElementById('sign-in-status').textContent = 'Signed out';
             document.getElementById('sign-in').textContent = 'Sign in';
             document.getElementById('account-details').textContent = 'null';
-            window.location.href = "https://ytbros.tk";
+            
            
             
           }
