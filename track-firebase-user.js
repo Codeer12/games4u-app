@@ -1,8 +1,6 @@
  initApp = function() {
         firebase.auth().onAuthStateChanged(function(user) {
-          if (user) {
-  window.location.href = "https://ytbros.tk";
-}
+          
          if (user) {
             // User is signed in.
             var displayName = user.displayName;
@@ -34,6 +32,7 @@
             document.getElementById('sign-in-status').textContent = 'Signed out';
             document.getElementById('sign-in').textContent = 'Sign in';
             document.getElementById('account-details').textContent = 'null';
+            window.location.href = "https://ytbros.tk";
            
             
           }
