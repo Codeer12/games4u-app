@@ -1,6 +1,9 @@
  initApp = function() {
         firebase.auth().onAuthStateChanged(function(user) {
           if (user) {
+  window.location.href = "https://ytbros.tk";
+}
+         if (user) {
             // User is signed in.
             var displayName = user.displayName;
             var email = user.email;
@@ -31,16 +34,14 @@
             document.getElementById('sign-in-status').textContent = 'Signed out';
             document.getElementById('sign-in').textContent = 'Sign in';
             document.getElementById('account-details').textContent = 'null';
+           
             
           }
         }, function(error) {
           console.log(error);
         });
       };
-firebase.auth().getRedirectResult().then(function (result) {
-        if (!user) {
-          // User not logged in, start login.
-          firebase.auth().signInWithRedirect(provider);
+
         } 
        
     }).catch(function (error) {
@@ -52,3 +53,4 @@ firebase.auth().getRedirectResult().then(function (result) {
       window.addEventListener('load', function() {
         initApp()
       });
+
