@@ -31,12 +31,23 @@
             document.getElementById('sign-in-status').textContent = 'Signed out';
             document.getElementById('sign-in').textContent = 'Sign in';
             document.getElementById('account-details').textContent = 'null';
-            window.location.href = "https://ytbros.tk";
+            
           }
         }, function(error) {
           console.log(error);
         });
       };
+firebase.auth().getRedirectResult().then(function (result) {
+        if (!user) {
+          // User not logged in, start login.
+          firebase.auth().signInWithRedirect(provider);
+        } 
+       
+    }).catch(function (error) {
+      // Handle Errors here.
+      console.log(error)
+      // ...
+    });
 
       window.addEventListener('load', function() {
         initApp()
