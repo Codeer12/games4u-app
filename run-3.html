@@ -61,6 +61,8 @@
                     <div class="silex-element-content normal"><a href="games.html" title="GAMES" class="">GAMES</a></div>
                 </div><div data-silex-type="text" class="editable-style text-element nav-button anchor-link nav silex-id-1553360333538-5 page-run-3 paged-element page-link-active">
                     <div class="silex-element-content normal"><a href="//github.com/codeer12/ytbrosweb/issues/new" title="REPORT PROBLEMS">REPORT PROBLEMS</a></div>
+                </div><div data-silex-type="text" class="editable-style text-element nav-button anchor-link nav silex-id-1554253465056-6 page-run-3 paged-element page-link-active">
+                    <div class="silex-element-content normal"><a href="index.html" title="HOME" class="">HOME</a><br></div>
                 </div></div>
         </div>
     </div>
@@ -70,7 +72,7 @@
     <div class="silex-pages">
         
 
-        <a id="page-home" data-silex-type="page" class="page-element" href="index.html">Home</a><a id="page-strike-force-heroes" href="strike-force-heroes.html" data-silex-type="page" class="page-element">Strike Force Heroes</a><a id="page-dbz-devolution" href="dbz-devolution.html" data-silex-type="page" class="page-element">DBZ Devolution</a><a id="page-the-impossible-quiz" href="the-impossible-quiz.html" data-silex-type="page" class="page-element">The Impossible Quiz</a><a id="page-run-3" href="run-3.html" data-silex-type="page" class="page-element page-link-active">Run 3</a><a id="page-games" href="games.html" data-silex-type="page" class="page-element">Games</a><a id="page-super-smash-flash-2" href="super-smash-flash-2.html" data-silex-type="page" class="page-element">Super Smash Flash 2</a><a id="page-profile" href="profile.html" data-silex-type="page" class="page-element">Profile</a></div>
+        <a id="page-home" data-silex-type="page" class="page-element" href="index.html">Home</a><a id="page-strike-force-heroes" href="strike-force-heroes.html" data-silex-type="page" class="page-element">Strike Force Heroes</a><a id="page-dbz-devolution" href="dbz-devolution.html" data-silex-type="page" class="page-element">DBZ Devolution</a><a id="page-the-impossible-quiz" href="the-impossible-quiz.html" data-silex-type="page" class="page-element">The Impossible Quiz</a><a id="page-run-3" href="run-3.html" data-silex-type="page" class="page-element page-link-active">Run 3</a><a id="page-games" href="games.html" data-silex-type="page" class="page-element">Games</a><a id="page-super-smash-flash-2" href="super-smash-flash-2.html" data-silex-type="page" class="page-element">Super Smash Flash 2</a><a id="page-profile" href="profile.html" data-silex-type="page" class="page-element">Profile</a><a id="page-request" href="request.html" data-silex-type="page" class="page-element">request</a></div>
 
 
 
@@ -121,19 +123,48 @@
     
 
 
-<div data-silex-type="html" class="editable-style silex-id-1552711448647-2 html-element page-run-3 paged-element page-link-active"><div class="silex-element-content"><div id="game">
+<div data-silex-type="html" class="editable-style silex-id-1552711448647-2 html-element page-run-3 paged-element page-link-active"><div class="silex-element-content"><div id="content">
 <iframe src="https://run3free.com/run-3.embed" width="748" height="561">Loading....</iframe>
-</div></div></div><div data-silex-type="html" class="editable-style html-element silex-id-1552769472279-4 page-run-3 paged-element page-link-active"><div class="silex-element-content"><iframe src="https://games.ytbros.tk/comments.html" width="446" height="564">Comments loading....</iframe></div></div><iframe style="display: none;"></iframe><div data-silex-type="html" class="editable-style html-element silex-id-1553467454724-3 page-run-3 paged-element page-link-active"><div class="silex-element-content"><a href="refresh()">
+</div></div></div><div data-silex-type="html" class="editable-style html-element silex-id-1552769472279-4 page-run-3 paged-element page-link-active"><div class="silex-element-content"><iframe src="https://games.ytbros.tk/comments.html" width="446" height="564">Comments loading....</iframe></div></div><iframe style="display: none;"></iframe><div data-silex-type="html" class="editable-style html-element silex-id-1553467454724-3 page-run-3 paged-element page-link-active"><div class="silex-element-content"><button onclick="refresh()">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Ic_refresh_48px.svg/1024px-Ic_refresh_48px.svg.png" width="100" height="100">
-</a>
+</button>
 <script type="text/javascript">function refresh() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("silex-element-content").innerHTML =
-      this.responseText;
+   var fetch = true;
+var url = 'games.html';
+$.ajax(
+{
+    // Post the variable fetch to url.
+    type : 'post',
+    url : url,
+    dataType : 'json', // expected returned data format.
+    data : 
+    {
+        'fetch' : fetch // You might want to indicate what you're requesting.
+    },
+    success : function(data)
+    {
+        // This happens AFTER the backend has returned an JSON array (or other object type)
+        var res1, res2;
+
+        for(var i = 0; i < data.length; i++)
+        {
+            // Parse through the JSON array which was returned.
+            // A proper error handling should be added here (check if
+            // everything went successful or not)
+
+            res1 = data[i].res1;
+            res2 = data[i].res2;
+
+            // Do something with the returned data
+            $('#content').html(res1);
+        }
+    },
+    complete : function(data)
+    {
+        // do something, not critical.
     }
-  };
-  xhttp.open("GET", "run-3.html", true);
-  xhttp.send();
-}</script></div></div></body></html>
+});
+  
+}</script>
+
+  </div></div></body></html>

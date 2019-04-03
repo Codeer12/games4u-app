@@ -72,7 +72,7 @@
     <div class="silex-pages">
         
 
-        <a id="page-home" data-silex-type="page" class="page-element" href="index.html">Home</a><a id="page-strike-force-heroes" href="strike-force-heroes.html" data-silex-type="page" class="page-element">Strike Force Heroes</a><a id="page-dbz-devolution" href="dbz-devolution.html" data-silex-type="page" class="page-element">DBZ Devolution</a><a id="page-the-impossible-quiz" href="the-impossible-quiz.html" data-silex-type="page" class="page-element">The Impossible Quiz</a><a id="page-run-3" href="run-3.html" data-silex-type="page" class="page-element">Run 3</a><a id="page-games" href="games.html" data-silex-type="page" class="page-element page-link-active">Games</a><a id="page-super-smash-flash-2" href="super-smash-flash-2.html" data-silex-type="page" class="page-element">Super Smash Flash 2</a><a id="page-profile" href="profile.html" data-silex-type="page" class="page-element">Profile</a></div>
+        <a id="page-home" data-silex-type="page" class="page-element" href="index.html">Home</a><a id="page-strike-force-heroes" href="strike-force-heroes.html" data-silex-type="page" class="page-element">Strike Force Heroes</a><a id="page-dbz-devolution" href="dbz-devolution.html" data-silex-type="page" class="page-element">DBZ Devolution</a><a id="page-the-impossible-quiz" href="the-impossible-quiz.html" data-silex-type="page" class="page-element">The Impossible Quiz</a><a id="page-run-3" href="run-3.html" data-silex-type="page" class="page-element">Run 3</a><a id="page-games" href="games.html" data-silex-type="page" class="page-element page-link-active">Games</a><a id="page-super-smash-flash-2" href="super-smash-flash-2.html" data-silex-type="page" class="page-element">Super Smash Flash 2</a><a id="page-profile" href="profile.html" data-silex-type="page" class="page-element">Profile</a><a id="page-request" href="request.html" data-silex-type="page" class="page-element">request</a></div>
 
 
 
@@ -129,20 +129,56 @@
                     <div class="silex-element-content normal"><a href="strike-force-heroes.html" title="STRIKEFORCEHEROES" class="">STRIKE FORCE HEROES</a></div>
                 </div></div><div data-silex-type="html" class="editable-style html-element silex-id-1552858142688-2 page-games paged-element page-link-active"><div class="silex-element-content"><img src="https://run3.run/upload/images/run-3.png" width="193" height="320"></div></div><div data-silex-type="text" class="editable-style text-element nav-button anchor-link nav silex-id-1552711725961-7 page-games paged-element page-link-active">
                     <div class="silex-element-content normal"><a href="the-impossible-quiz.html" title="THE IMPOSSIBILE QUIZ" class="">THE IMPOSSIBLE QUIZ</a></div>
-                </div><div data-silex-type="html" class="editable-style html-element silex-id-1552873728217-3 page-games paged-element page-link-active"><div class="silex-element-content"><img src="https://theimpossible-quiz.com/data/image/game/screen-shot-2018-07-15-at-10.15.37-pm.png" border="0" height="125" width="128"></div></div><div data-silex-type="text" class="editable-style silex-id-1552946259452-1 text-element page-games paged-element page-link-active"><div class="silex-element-content normal"><p>NO IMAGE</p></div></div><div data-silex-type="text" class="editable-style text-element nav-button anchor-link nav silex-id-1553360216416-0 page-games paged-element page-link-active">
+                </div><div data-silex-type="html" class="editable-style html-element silex-id-1552873728217-3 page-games paged-element page-link-active"><div class="silex-element-content"><img src="https://theimpossible-quiz.com/data/image/game/screen-shot-2018-07-15-at-10.15.37-pm.png" width="128" height="125" border="0"></div></div><div data-silex-type="text" class="editable-style silex-id-1552946259452-1 text-element page-games paged-element page-link-active"><div class="silex-element-content normal"><p>NO IMAGE</p></div></div><div data-silex-type="text" class="editable-style text-element nav-button anchor-link nav silex-id-1553360216416-0 page-games paged-element page-link-active">
                     <div class="silex-element-content normal"><a href="dbz-devolution.html" title="THE IMPOSSIBILE QUIZ" class="">DBZ </a><a href="dbz-devolution.html" class="">&nbsp;DEVOLUTION</a></div>
                 </div><div data-silex-type="html" class="editable-style html-element silex-id-1553467449607-2 page-games paged-element page-link-active"><div class="silex-element-content"><button onclick="refresh()">
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Ic_refresh_48px.svg/1024px-Ic_refresh_48px.svg.png" width="100" height="100">
 </button>
 <script type="text/javascript">function refresh() {
-    $.ajax({
-   url:/games.html,
-   type:'GET',
-   success: function(data){
-       $('#content').html($(data).find('#content').html());
-   }
+   var fetch = true;
+var url = 'games.html';
+$.ajax(
+{
+    // Post the variable fetch to url.
+    type : 'post',
+    url : url,
+    dataType : 'json', // expected returned data format.
+    data : 
+    {
+        'fetch' : fetch // You might want to indicate what you're requesting.
+    },
+    success : function(data)
+    {
+        // This happens AFTER the backend has returned an JSON array (or other object type)
+        var res1, res2;
+
+        for(var i = 0; i < data.length; i++)
+        {
+            // Parse through the JSON array which was returned.
+            // A proper error handling should be added here (check if
+            // everything went successful or not)
+
+            res1 = data[i].res1;
+            res2 = data[i].res2;
+
+            // Do something with the returned data
+            $('#content').html(res1);
+        }
+    },
+    complete : function(data)
+    {
+        // do something, not critical.
+    }
 });
   
 }</script>
 
-  </div></div><div data-silex-type="html" class="editable-style silex-id-1553777078975-0 html-element page-games paged-element page-link-active"><div class="silex-element-content"><div id="content"><a href="/ajax-test">This is an ajax test. Click me to go there.</a></div></div></div></body></html>
+  </div></div><div data-silex-type="html" class="editable-style silex-id-1553777078975-0 html-element page-games paged-element page-link-active"><div class="silex-element-content"><div id="content"><a href="/ajax-test">This is an ajax test. Click me to go there. This is another ajax test.</a></div></div></div><div data-silex-type="html" class="editable-style silex-id-1553989392635-0 html-element page-games paged-element page-link-active"><div class="silex-element-content"><div id="content">
+<button>
+<a href="chat" class="button">Chat in the Chat Chat</a>
+</button>
+<button>
+<a href="/#!page-chat" class="button">Chat in the Chat Chat (beta)</a>
+</button>
+</div>
+</div></div></body></html>
