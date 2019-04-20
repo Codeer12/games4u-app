@@ -25,7 +25,7 @@
         } else {
           // User is signed out.
           // [START_EXCLUDE]
-          window.location.href = "https://ytbros.tk";
+          window.location.href = "//sites.google.com/stu.palmbeachschools.org/games4u/login";
           document.getElementById('quickstart-sign-in-status').textContent = 'Signed out';
           document.getElementById('quickstart-sign-in').textContent = 'Sign in';
           document.getElementById('quickstart-account-details').textContent = 'null';
