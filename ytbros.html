@@ -464,8 +464,10 @@ function signout() {
     messagingSenderId: "152743638512"
   };
   firebase.initializeApp(config);
-</script></div></div><div data-silex-type="html" class="editable-style html-element silex-id-1556935039153-7 page-home paged-element" data-silex-id="silex-id-1556935039153-7"><div class="silex-element-content"><button onclick="signout()">Sign Out</button>
+</script></div></div><div data-silex-type="html" class="editable-style html-element silex-id-1556935039153-7 page-home paged-element" data-silex-id="silex-id-1556935039153-7"><div class="silex-element-content"><button id="signout">Sign Out</button>
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
 <script>
+document.getElementById("signout").onclick = signout();
     // Signs-out of Friendly Chat.
 function signout() {
   // Sign out of Firebase.
